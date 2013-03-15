@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://four51.com/services/orderfield" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://four51.com/services/orderfield" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://four51.com/services/orderfield">
+      <s:element name="Save">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderFields" type="tns:ArrayOfOrderFieldProperties" />
+            <s:element minOccurs="0" maxOccurs="1" name="SharedSecret" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOrderFieldProperties">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderFieldProperties" type="tns:OrderFieldProperties" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderFieldProperties">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Label" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:OrderFieldType" />
+          <s:element minOccurs="1" maxOccurs="1" name="Required" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultValue" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExplicitOptionAssignment" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Options" type="tns:ArrayOfOrderFieldOptionProperties" />
+          <s:element minOccurs="1" maxOccurs="1" name="Lines" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Width" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxLength" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="OrderFieldType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Text" />
+          <s:enumeration value="DropDown" />
+          <s:enumeration value="RadioButtonList" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfOrderFieldOptionProperties">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderFieldOptionProperties" type="tns:OrderFieldOptionProperties" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderFieldOptionProperties">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InteropID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveResult" type="tns:ArrayOfErrorReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfErrorReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ErrorReport" type="tns:ErrorReport" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ErrorReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="InteropID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderFieldNames" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="SharedSecret" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteResult" type="tns:ArrayOfErrorReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteOptions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Deletes" type="tns:ArrayOfOrderFieldOptionUpadte" />
+            <s:element minOccurs="0" maxOccurs="1" name="SharedSecret" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOrderFieldOptionUpadte">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderFieldOptionUpadte" type="tns:OrderFieldOptionUpadte" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderFieldOptionUpadte">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrderFieldName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InteropID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteOptionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteOptionsResult" type="tns:ArrayOfErrorReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveOptions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Updates" type="tns:ArrayOfOrderFieldOptionUpadte" />
+            <s:element minOccurs="0" maxOccurs="1" name="SharedSecret" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveOptionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveOptionsResult" type="tns:ArrayOfErrorReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaveSoapIn">
+    <wsdl:part name="parameters" element="tns:Save" />
+  </wsdl:message>
+  <wsdl:message name="SaveSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteOptionsSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteOptions" />
+  </wsdl:message>
+  <wsdl:message name="DeleteOptionsSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveOptionsSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveOptions" />
+  </wsdl:message>
+  <wsdl:message name="SaveOptionsSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveOptionsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OrderFieldSoap">
+    <wsdl:operation name="Save">
+      <wsdl:input message="tns:SaveSoapIn" />
+      <wsdl:output message="tns:SaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input message="tns:DeleteSoapIn" />
+      <wsdl:output message="tns:DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOptions">
+      <wsdl:input message="tns:DeleteOptionsSoapIn" />
+      <wsdl:output message="tns:DeleteOptionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOptions">
+      <wsdl:input message="tns:SaveOptionsSoapIn" />
+      <wsdl:output message="tns:SaveOptionsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OrderFieldSoap" type="tns:OrderFieldSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Save">
+      <soap:operation soapAction="http://four51.com/services/orderfield/Save" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://four51.com/services/orderfield/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOptions">
+      <soap:operation soapAction="http://four51.com/services/orderfield/DeleteOptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOptions">
+      <soap:operation soapAction="http://four51.com/services/orderfield/SaveOptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OrderFieldSoap12" type="tns:OrderFieldSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Save">
+      <soap12:operation soapAction="http://four51.com/services/orderfield/Save" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap12:operation soapAction="http://four51.com/services/orderfield/Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOptions">
+      <soap12:operation soapAction="http://four51.com/services/orderfield/DeleteOptions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOptions">
+      <soap12:operation soapAction="http://four51.com/services/orderfield/SaveOptions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrderField">
+    <wsdl:port name="OrderFieldSoap" binding="tns:OrderFieldSoap">
+      <soap:address location="http://www.four51.com/services/OrderField.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OrderFieldSoap12" binding="tns:OrderFieldSoap12">
+      <soap12:address location="http://www.four51.com/services/OrderField.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

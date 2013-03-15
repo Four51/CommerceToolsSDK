@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://www.four51.com/services/Address.asmx?wsdl" docRef="http://www.four51.com/services/Address.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://www.four51.com/services/Address.asmx" xmlns:q1="http://four51.com/services/address" binding="q1:AddressSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://www.four51.com/services/Address.asmx" xmlns:q2="http://four51.com/services/address" binding="q2:AddressSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

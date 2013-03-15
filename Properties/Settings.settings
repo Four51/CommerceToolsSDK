@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Four51.APISDK.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Core_Four51Address_Address" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.four51.com/services/Address.asmx</Value>
+    </Setting>
+    <Setting Name="Core_Four51WebCostCenter_CostCenter" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.four51.com/services/CostCenter.asmx</Value>
+    </Setting>
+    <Setting Name="Core_Four51WebGroup_Group" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.four51.com/services/Group.asmx</Value>
+    </Setting>
+    <Setting Name="Core_Four51WebProduct_Product" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.four51.com/services/Product.asmx</Value>
+    </Setting>
+    <Setting Name="Core_Four51User_User" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.four51.com/services/User.asmx</Value>
+    </Setting>
+    <Setting Name="Four51_APISDK_Four51OrderFields_OrderField" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.four51.com/services/OrderField.asmx</Value>
+    </Setting>
+    <Setting Name="Four51_APISDK_Four51SpendingAccount_SpendingAccount" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.four51.com/services/SpendingAccount.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

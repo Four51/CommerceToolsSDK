@@ -1,0 +1,67 @@
+C:\Four51SAP Connector\Core\bin\Debug\FluentNHibernate.dll
+C:\Four51SAP Connector\Core\bin\Debug\Four51.Log.dll
+C:\Four51SAP Connector\Core\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Four51SAP Connector\Core\bin\Debug\NHibernate.dll
+C:\Four51SAP Connector\Core\bin\Debug\Iesi.Collections.dll
+C:\Four51SAP Connector\Core\bin\Debug\log4net.dll
+C:\Four51SAP Connector\Core\bin\Debug\Antlr3.Runtime.dll
+C:\Four51SAP Connector\Core\bin\Debug\FluentNHibernate.pdb
+C:\Four51SAP Connector\Core\bin\Debug\Four51.Log.pdb
+C:\Four51SAP Connector\Core\bin\Debug\NHibernate.xml
+C:\Four51SAP Connector\Core\bin\Debug\Iesi.Collections.xml
+C:\Four51SAP Connector\Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Four51SAP Connector\Core\bin\Debug\Remotion.Data.Linq.dll
+C:\Four51SAP Connector\Core\bin\Debug\FluentNHibernate.xml
+C:\Four51SAP Connector\Core\bin\Debug\NHibernate.pdb
+C:\Four51SAP Connector\Core\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Four51SAP Connector\Core\obj\Debug\Four51Connector.Core.csproj.ResolveComReference.cache
+C:\Four51SAP Connector\Core\bin\Debug\Four51.Core.dll.config
+C:\Four51SAP Connector\Core\bin\Debug\Four51.Core.dll
+C:\Four51SAP Connector\Core\bin\Debug\Four51.Core.pdb
+C:\Four51SAP Connector\Core\obj\Debug\Four51.Core.dll
+C:\Four51SAP Connector\Core\obj\Debug\Four51.Core.pdb
+C:\Four51SAP Connector\Core\bin\Debug\Castle.Core.dll
+C:\Four51SAP Connector\Core\bin\Debug\NHibernate.ByteCode.Castle.xml
+C:\Four51SAP Connector\Core\bin\Debug\Castle.Core.xml
+C:\Four51SAP Connector\Core\bin\Debug\NHibernate.ByteCode.Castle.pdb
+C:\Four51SAP Connector\Core\bin\Debug\Iesi.Collections.pdb
+C:\Four51SAP Connector\Core\bin\Debug\Spring.Core.dll
+C:\Four51SAP Connector\Core\bin\Debug\Common.Logging.dll
+C:\Four51SAP Connector\Core\obj\Debug\Interop.QBFC10Lib.dll
+C:\Integration\Core\bin\Debug\Four51.Core.dll.config
+C:\Integration\Core\bin\Debug\Four51.Core.dll
+C:\Integration\Core\bin\Debug\Four51.Core.pdb
+C:\Integration\Core\bin\Debug\Common.Logging.dll
+C:\Integration\Core\bin\Debug\FluentNHibernate.dll
+C:\Integration\Core\bin\Debug\Four51.Log.dll
+C:\Integration\Core\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Integration\Core\bin\Debug\NHibernate.dll
+C:\Integration\Core\bin\Debug\Spring.Core.dll
+C:\Integration\Core\bin\Debug\System.Data.SQLite.dll
+C:\Integration\Core\bin\Debug\log4net.dll
+C:\Integration\Core\bin\Debug\Iesi.Collections.dll
+C:\Integration\Core\bin\Debug\Antlr3.Runtime.dll
+C:\Integration\Core\bin\Debug\Remotion.Data.Linq.dll
+C:\Integration\Core\bin\Debug\Castle.Core.dll
+C:\Integration\Core\bin\Debug\Four51.Log.pdb
+C:\Integration\Core\bin\Debug\FluentNHibernate.pdb
+C:\Integration\Core\bin\Debug\FluentNHibernate.xml
+C:\Integration\Core\bin\Debug\NHibernate.pdb
+C:\Integration\Core\bin\Debug\NHibernate.xml
+C:\Integration\Core\bin\Debug\NHibernate.ByteCode.Castle.pdb
+C:\Integration\Core\bin\Debug\NHibernate.ByteCode.Castle.xml
+C:\Integration\Core\bin\Debug\Iesi.Collections.pdb
+C:\Integration\Core\bin\Debug\Iesi.Collections.xml
+C:\Integration\Core\bin\Debug\Castle.Core.xml
+C:\Integration\Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Integration\Core\obj\Debug\Interop.QBFC10Lib.dll
+C:\Integration\Core\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Integration\Core\obj\Debug\Four51Connector.Core.csproj.ResolveComReference.cache
+C:\Integration\Core\obj\Debug\Four51.Core.dll
+C:\Integration\Core\obj\Debug\Four51.Core.pdb
+C:\Four51\CT\CT API SDK\obj\Debug\Four51Connector.Core.csprojResolveAssemblyReference.cache
+C:\Four51\CT\CT API SDK\obj\Debug\Four51.Core.dll
+C:\Four51\CT\CT API SDK\obj\Debug\Four51.Core.pdb
+C:\Four51\CT\CT API SDK\bin\Debug\Four51.Core.dll.config
+C:\Four51\CT\CT API SDK\bin\Debug\Four51.Core.dll
+C:\Four51\CT\CT API SDK\bin\Debug\Four51.Core.pdb

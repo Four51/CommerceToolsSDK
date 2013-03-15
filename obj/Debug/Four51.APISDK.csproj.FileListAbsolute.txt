@@ -1,0 +1,6 @@
+C:\Four51\CT\CT API SDK\obj\Debug\Four51.APISDK.csprojResolveAssemblyReference.cache
+C:\Four51\CT\CT API SDK\bin\Debug\Four51.APISDK.dll.config
+C:\Four51\CT\CT API SDK\bin\Debug\Four51.APISDK.dll
+C:\Four51\CT\CT API SDK\bin\Debug\Four51.APISDK.pdb
+C:\Four51\CT\CT API SDK\obj\Debug\Four51.APISDK.dll
+C:\Four51\CT\CT API SDK\obj\Debug\Four51.APISDK.pdb
