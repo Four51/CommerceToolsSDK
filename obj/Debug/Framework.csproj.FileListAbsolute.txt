@@ -1,8 +1,0 @@
-C:\Four51SAP Connector\Framework\bin\Debug\Framework.dll
-C:\Four51SAP Connector\Framework\bin\Debug\Framework.pdb
-C:\Four51SAP Connector\Framework\bin\Debug\log4net.dll
-C:\Four51SAP Connector\Framework\bin\Debug\log4net.pdb
-C:\Four51SAP Connector\Framework\bin\Debug\log4net.xml
-C:\Four51SAP Connector\Framework\obj\Debug\ResolveAssemblyReference.cache
-C:\Four51SAP Connector\Framework\obj\Debug\Framework.dll
-C:\Four51SAP Connector\Framework\obj\Debug\Framework.pdb
