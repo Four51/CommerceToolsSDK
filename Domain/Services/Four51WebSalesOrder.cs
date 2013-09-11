@@ -526,7 +526,6 @@ namespace Four51.APISDK.Services
 			this._classification = detail.FirstElement("Classification");
 			this._url = detail.FirstElement("URL");
 			this._lineitemid = detail.TryExtrinsicValue("lineItemID");
-			this._producttype = (RequestProductType)Enum.Parse(typeof(RequestProductType), detail.TryExtrinsicValue("productType"));
 			this._quantitymultiplier = Utils.Int32ParseCatch(detail.TryExtrinsicValue("quantityMultiplier"));
 			this._costcenter = detail.TryExtrinsicValue("costCenter");
 			this._costcenterinteropid = detail.TryExtrinsicValue("costCenterInteropID");
@@ -540,6 +539,11 @@ namespace Four51.APISDK.Services
 			this._shipweight = Utils.DoubleParseCatch(detail.TryExtrinsicValue("shipWeight"));
 			this._requestedshipper = detail.TryExtrinsicValue("requestedShipper");
 			//TODO:  deal with missing xml elements
+			try
+			{
+				this._producttype = (RequestProductType)Enum.Parse(typeof(RequestProductType), detail.TryExtrinsicValue("productType"));
+			}
+			catch { }
 			try {
 				this._requstedshippingaccount = detail.TryExtrinsicValue("requestedShippingAccount");
 			}
@@ -875,10 +879,12 @@ namespace Four51.APISDK.Services
 			this._four51username = request.TryExtrinsicValue("Four51UserName");
 			this._four51userinteropid = request.TryExtrinsicValue("Four51UserInteropID");
 			this._four51userfirstname = request.TryExtrinsicValue("Four51UserFirstName");
+			this._fromUserIP = request.TryExtrinsicValue("FromUserIP");
 			this._four51userlastname = request.TryExtrinsicValue("Four51UserLastName");
 			this._four51userphone = request.TryExtrinsicValue("Four51UserPhone");
 			this._paymenttype = (PaymentType)Enum.Parse(typeof(PaymentType), request.TryExtrinsicValue("PaymentType"), true);
-			this._payment = new SalesOrderPayment(request.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "PaymentSource"));
+			this._paymentsource = new SalesOrderPaymentSource(request.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "PaymentSource"));
+			this._payment = new SalesOrderPayment(request.Elements("Payment"));
 			this._buyerinteropid = request.TryExtrinsicValue("BuyerInteropID");
 			this._billingaddressinteropid = request.TryExtrinsicValue("BillingAddressInteropID");
 			this._ordertype = (OrderType)Enum.Parse(typeof(OrderType), request.TryExtrinsicValue("OrderType"), true);
@@ -887,6 +893,7 @@ namespace Four51.APISDK.Services
 			this._total = new SalesOrderTotal(request.Elements("Total"));
 			this._shipping = new SalesOrderShipping(request.Elements("Shipping"));
 			this._billto = new SalesOrderBillTo(request.Elements("BillTo"));
+			this._coupon = new SalesOrderCoupon(request.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "Coupon"));
 		}
 
 		#region ISalesOrderRequest Members
@@ -932,6 +939,13 @@ namespace Four51.APISDK.Services
 			  get { return _tax; }
 			  set { _tax = value; }
 		}
+		private SalesOrderCoupon _coupon;
+		[DataMember]
+		public SalesOrderCoupon Coupon
+		{
+			get { return _coupon; }
+			set { _coupon = value; }
+		}
 		private string _comments;
 		[DataMember]
 		public string  Comments
@@ -959,6 +973,12 @@ namespace Four51.APISDK.Services
 			  get { return _four51userfirstname; }
 			  set { _four51userfirstname = value; }
 		}
+		private string _fromUserIP;
+		public string FromUserIP
+		{
+			get { return _fromUserIP; }
+			set { _fromUserIP = value; }
+		}
 		private string _four51userlastname;
 		[DataMember]
 		public string  Four51UserLastName
@@ -981,10 +1001,17 @@ namespace Four51.APISDK.Services
 		}
 		private SalesOrderPayment _payment;
 		[DataMember]
-		public SalesOrderPayment  Payment
+		public SalesOrderPayment Payment
 		{
-			  get { return _payment; }
-			  set { _payment = value; }
+			get { return _payment; }
+			set { _payment = value; }
+		}
+		private SalesOrderPaymentSource _paymentsource;
+		[DataMember]
+		public SalesOrderPaymentSource  PaymentSource
+		{
+			  get { return _paymentsource; }
+			  set { _paymentsource = value; }
 		}
 		private string _buyerinteropid;
 		[DataMember]
@@ -1117,11 +1144,63 @@ namespace Four51.APISDK.Services
 	}
 
 	[DataContract(Name = "Payment")]
-	public class SalesOrderPayment : ISalesOrderPayment {
+	public class SalesOrderPayment : ISalesOrderPayment
+	{
 		public SalesOrderPayment() { }
-		public SalesOrderPayment(IEnumerable<XElement> payment) {
+		public SalesOrderPayment(IEnumerable<XElement> payment)
+		{
+			_pcard = new SalesOrderPaymentPCard(payment.Elements("PCard"));
+		}
+		
+		private SalesOrderPaymentPCard _pcard;
+		[DataMember]
+		public SalesOrderPaymentPCard PCard
+		{
+			get { return _pcard; }
+			set { _pcard = value; }
+		}
+	}
+
+	[DataContract(Name = "PCard")]
+	public class SalesOrderPaymentPCard : ISalesOrderPaymentPCard
+	{
+		public SalesOrderPaymentPCard() { }
+		public SalesOrderPaymentPCard(IEnumerable<XElement> card)
+		{
+			this._number = card.Attributes("number").First().Value;
+			this._name = card.Attributes("name").First().Value;
+			this._expiration = Utils.DateTimeParseCatch(card.Attributes("expiration").First().Value);
+		}
+		private string _number;
+		[DataMember]
+		public string Number
+		{
+			get { return _number; }
+			set { _number = value; }
+		}
+		private DateTime _expiration;
+		[DataMember]
+		public DateTime Expiration
+		{
+			get { return _expiration; }
+			set { _expiration = value; }
+		}
+		private string _name;
+		[DataMember]
+		public string Name {
+			get { return _name; }
+			set { _name = value; }
+		}
+	}
+
+	[DataContract(Name = "Payment")]
+	public class SalesOrderPaymentSource : ISalesOrderPaymentSource
+	{
+		public SalesOrderPaymentSource() { }
+		public SalesOrderPaymentSource(IEnumerable<XElement> payment) {
 			this._type = (PaymentType)Enum.Parse(typeof(PaymentType), payment.TryExtrinsicValue("PaymentType"), true);
 			this._amount = Utils.DoubleParseCatch(payment.TryExtrinsicValue("Amount"));
+			this._name = payment.TryExtrinsicValue("PaymentSourceName");
 		}
 		#region ISalesOrderPayment Members
 		private PaymentType _type;
@@ -1138,10 +1217,353 @@ namespace Four51.APISDK.Services
 			  get { return _amount; }
 			  set { _amount = value; }
 		}
-
+		private string _name;
+		[DataMember]
+		public string Name
+		{
+			get { return _name; }
+			set { _name = value; }
+		}
 		#endregion
 	}
-	
+
+	[DataContract(Name = "CouponProduct")]
+	public class SalesOrderCouponProduct : ISalesOrderCouponProduct
+	{
+		public SalesOrderCouponProduct() { }
+		public SalesOrderCouponProduct(XElement product)
+		{
+			this._interopid = product.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "InteropID").First().Value;
+			this._productid = product.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "ProductID").First().Value;
+		}
+		private string _interopid;
+		[DataMember]
+		public string InteropID
+		{
+			get { return _interopid; }
+			set { _interopid = value; }
+		}
+		private string _productid;
+		[DataMember]
+		public string ProductID
+		{
+			get { return _productid; }
+			set { _productid = value; }
+		}
+	}
+
+	[DataContract(Name = "CouponCategory")]
+	public class SalesOrderCouponCategory : ISalesOrderCouponCategory
+	{
+		public SalesOrderCouponCategory() { }
+		public SalesOrderCouponCategory(XElement category)
+		{
+			this._interopid = category.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "InteropID").First().Value;
+			this._name = category.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "CategoryName").First().Value;
+		}
+		private string _interopid;
+		[DataMember]
+		public string InteropID
+		{
+			get { return _interopid; }
+			set { _interopid = value; }
+		}
+		private string _name;
+		[DataMember]
+		public string CategoryName
+		{
+			get { return _name; }
+			set { _name = value; }
+		}
+	}
+
+	[CollectionDataContract(Name = "CouponProducts")]
+	public class SalesOrderCouponProducts : IList<SalesOrderCouponProduct>
+	{
+		private List<SalesOrderCouponProduct> _list = new List<SalesOrderCouponProduct>();
+		public SalesOrderCouponProducts(IEnumerable<XElement> product)
+		{
+			var products = product.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "Product");
+			foreach (XElement el in products)
+			{
+				this.Add(new SalesOrderCouponProduct(el));
+			}
+		}
+		#region List implementation
+		public int IndexOf(SalesOrderCouponProduct item)
+		{
+			return _list.IndexOf(item);
+		}
+
+		public void Insert(int index, SalesOrderCouponProduct item)
+		{
+			_list.Insert(index, item);
+		}
+
+		public void RemoveAt(int index)
+		{
+			_list.RemoveAt(index);
+		}
+
+		public SalesOrderCouponProduct this[int index]
+		{
+			get
+			{
+				return _list[index];
+			}
+			set
+			{
+				_list[index] = value;
+			}
+		}
+
+		public void Add(SalesOrderCouponProduct item)
+		{
+			_list.Add(item);
+		}
+
+		public void Clear()
+		{
+			_list.Clear();
+		}
+
+		public bool Contains(SalesOrderCouponProduct item)
+		{
+			return _list.Contains(item);
+		}
+
+		public void CopyTo(SalesOrderCouponProduct[] array, int arrayIndex)
+		{
+			_list.CopyTo(array, arrayIndex);
+		}
+
+		public int Count
+		{
+			get { return _list.Count; }
+		}
+
+		public bool IsReadOnly
+		{
+			get { return false; }
+		}
+
+		public bool Remove(SalesOrderCouponProduct item)
+		{
+			return _list.Remove(item);
+		}
+
+		public IEnumerator<SalesOrderCouponProduct> GetEnumerator()
+		{
+			return _list.GetEnumerator();
+		}
+
+		System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+		{
+			return _list.GetEnumerator();
+		}
+		#endregion
+	}
+
+	[CollectionDataContract(Name = "CouponCategories")]
+	public class SalesOrderCouponCategories : IList<SalesOrderCouponCategory>
+	{
+		private List<SalesOrderCouponCategory> _list = new List<SalesOrderCouponCategory>();
+		public SalesOrderCouponCategories(IEnumerable<XElement> category)
+		{
+			var categories = category.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "Product");
+			foreach (XElement el in categories)
+			{
+				this.Add(new SalesOrderCouponCategory(el));
+			}
+		}
+		#region List implementation
+		public int IndexOf(SalesOrderCouponCategory item)
+		{
+			return _list.IndexOf(item);
+		}
+
+		public void Insert(int index, SalesOrderCouponCategory item)
+		{
+			_list.Insert(index, item);
+		}
+
+		public void RemoveAt(int index)
+		{
+			_list.RemoveAt(index);
+		}
+
+		public SalesOrderCouponCategory this[int index]
+		{
+			get
+			{
+				return _list[index];
+			}
+			set
+			{
+				_list[index] = value;
+			}
+		}
+
+		public void Add(SalesOrderCouponCategory item)
+		{
+			_list.Add(item);
+		}
+
+		public void Clear()
+		{
+			_list.Clear();
+		}
+
+		public bool Contains(SalesOrderCouponCategory item)
+		{
+			return _list.Contains(item);
+		}
+
+		public void CopyTo(SalesOrderCouponCategory[] array, int arrayIndex)
+		{
+			_list.CopyTo(array, arrayIndex);
+		}
+
+		public int Count
+		{
+			get { return _list.Count; }
+		}
+
+		public bool IsReadOnly
+		{
+			get { return false; }
+		}
+
+		public bool Remove(SalesOrderCouponCategory item)
+		{
+			return _list.Remove(item);
+		}
+
+		public IEnumerator<SalesOrderCouponCategory> GetEnumerator()
+		{
+			return _list.GetEnumerator();
+		}
+
+		System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+		{
+			return _list.GetEnumerator();
+		}
+		#endregion
+	}
+
+	[DataContract(Name = "Coupon")]
+	public class SalesOrderCoupon : ISalesOrderCoupon
+	{
+		public SalesOrderCoupon() { }
+		public SalesOrderCoupon(IEnumerable<XElement> coupon)
+		{
+			this._code = coupon.TryExtrinsicValue("CouponCode");
+			this._interopid = coupon.TryExtrinsicValue("InteropID");
+			this._amount = Utils.DoubleParseCatch(coupon.TryExtrinsicValue("DiscountAmount"));
+			this._type = (CouponType)Enum.Parse(typeof(CouponType), coupon.TryExtrinsicValue("Type"), true);
+			this._distype = (CouponDiscountAmountType)Enum.Parse(typeof(CouponDiscountAmountType), coupon.TryExtrinsicValue("DiscountAmountType"), true);
+			this._limit = Utils.Int32ParseCatch(coupon.TryExtrinsicValue("RedeemLimit"));
+			this._minimum = Utils.DoubleParseCatch(coupon.TryExtrinsicValue("MinimumPurchase"));
+			this._applysubtotal = Utils.BoolParseCatch(coupon.TryExtrinsicValue("ApplyToSubtotal"));
+			this._applyshipping = Utils.BoolParseCatch(coupon.TryExtrinsicValue("ApplyToShipping"));
+			this._applytax = Utils.BoolParseCatch(coupon.TryExtrinsicValue("ApplyToTax"));
+			this._disamount = Utils.DoubleParseCatch(coupon.TryExtrinsicValue("CouponConfiguredDiscountAmount"));
+			this._products = new SalesOrderCouponProducts(coupon.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "Products"));
+			this._categories = new SalesOrderCouponCategories(coupon.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "Categories"));
+		}
+		private IList<SalesOrderCouponCategory> _categories;
+		[DataMember]
+		public IList<SalesOrderCouponCategory> Categories
+		{
+			get { return _categories; }
+			set { _categories = value; }
+		}
+		private IList<SalesOrderCouponProduct> _products;
+		[DataMember]
+		public IList<SalesOrderCouponProduct> Products
+		{
+			get { return _products; }
+			set { _products = value; }
+		}
+		private string _code;
+		[DataMember]
+		public string Code
+		{
+			get { return _code; }
+			set { _code = value; }
+		}
+		private string _interopid;
+		[DataMember]
+		public string InteropID
+		{
+			get { return _interopid; }
+			set { _interopid = value; }
+		}
+		private double _amount;
+		[DataMember]
+		public double DiscountAmount
+		{
+			get { return _amount; }
+			set { _amount = value; }
+		}
+		private CouponType _type;
+		[DataMember]
+		public CouponType Type
+		{
+			get { return _type; }
+			set { _type = value; }
+		}
+		private CouponDiscountAmountType _distype;
+		[DataMember]
+		public CouponDiscountAmountType DiscountAmountType
+		{
+			get { return _distype; }
+			set { _distype = value; }
+		}
+		private int _limit;
+		[DataMember]
+		public int RedeemLimit
+		{
+			get { return _limit; }
+			set { _limit = value; }
+		}
+		private double _minimum;
+		[DataMember]
+		public double MinimumPurchase
+		{
+			get { return _minimum; }
+			set { _minimum = value; }
+		}
+		private bool _applysubtotal;
+		[DataMember]
+		public bool ApplyToSubtotal
+		{
+			get { return _applysubtotal; }
+			set { _applysubtotal = value; }
+		}
+		private bool _applyshipping;
+		[DataMember]
+		public bool ApplyToShipping
+		{
+			get { return _applyshipping; }
+			set { _applyshipping = value; }
+		}
+		private bool _applytax;
+		[DataMember]
+		public bool ApplyToTax
+		{
+			get { return _applytax; }
+			set { _applytax = value; }
+		}
+		private double _disamount;
+		[DataMember]
+		public double CouponConfiguredDiscountAmount
+		{
+			get { return _disamount; }
+			set { _disamount = value; }
+		}
+	}
+
 	[DataContract(Name = "Total")]
 	public class SalesOrderTotal : ISalesOrderTotal {
 		public SalesOrderTotal() { }
@@ -1237,9 +1659,11 @@ namespace Four51.APISDK.Services
 			this._id = address.Attributes("addressID").First().Value;
 			this._name = address.FirstElement("Name");
 			this._email = address.FirstElement("Email");
-			this._phone = String.Format("{0}.{1}.{2}",
-				address.FirstElement("CountryCode"),
-				address.FirstElement("AreaOrCityCode"),
+			var country = address.FirstElement("CountryCode");
+			var area = address.FirstElement("AreaOrCityCode");
+			this._phone = String.Format("{0}{1}{2}",
+				country != null ? country + "." : "",
+				area != null ? area + "." : "",
 				address.FirstElement("Number"));
 			this._postalAddress = new SalesOrderPostalAddress(address.Elements("PostalAddress"));
 		}

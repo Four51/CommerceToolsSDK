@@ -46,22 +46,61 @@ namespace Four51.APISDK.Services {
 		SalesOrderBillTo BillTo { get; set; }
 		SalesOrderShipping Shipping { get; set; }
 		SalesOrderTax Tax { get; set; }
+		SalesOrderCoupon Coupon { get; set; }
 		string Comments { get; set; }
 		string Four51UserName { get; set; }
 		string Four51UserInteropId { get; set; }
 		string Four51UserFirstName { get; set; }
+		string FromUserIP { get; set; }
 		string Four51UserLastName { get; set; }
 		string Four51UserPhone { get; set; }
 		PaymentType PaymentType { get; set; }
-		SalesOrderPayment Payment { get; set; }
+		SalesOrderPaymentSource PaymentSource { get; set; }
 		string BuyerInteropId { get; set; }
 		string BillingAddressInteropId { get; set; }
 		OrderType OrderType { get; set; }
 		Dictionary<string, string> OrderFields { get; set; }
 	}
-	public interface ISalesOrderPayment {
+	public interface ISalesOrderCoupon
+	{
+		string Code { get; set; }
+		string InteropID { get; set; }
+		double DiscountAmount { get; set; }
+		CouponType Type { get; set; }
+		CouponDiscountAmountType DiscountAmountType { get; set; }
+		int RedeemLimit { get; set; }
+		double MinimumPurchase { get; set; }
+		bool ApplyToSubtotal { get; set; }
+		bool ApplyToShipping { get; set; }
+		bool ApplyToTax { get; set; }
+		double CouponConfiguredDiscountAmount { get; set; }
+		IList<SalesOrderCouponProduct> Products { get; set; }
+		IList<SalesOrderCouponCategory> Categories { get; set; }
+	}
+	public interface ISalesOrderCouponProduct
+	{
+		string InteropID { get; set; }
+		string ProductID { get; set; }
+	}
+	public interface ISalesOrderCouponCategory
+	{
+		string InteropID { get; set; }
+		string CategoryName { get; set; }
+	}
+	public interface ISalesOrderPayment
+	{
+		SalesOrderPaymentPCard PCard { get; set; }
+	}
+	public interface ISalesOrderPaymentPCard
+	{
+		string Number { get; set; }
+		DateTime Expiration { get; set; }
+		string Name { get; set; }
+	}
+	public interface ISalesOrderPaymentSource {
 		PaymentType Type { get; set; }
 		double Amount { get; set; }
+		string Name { get; set; }
 	}
 	public interface ISalesOrderTotal {
 		double Money { get; set; }

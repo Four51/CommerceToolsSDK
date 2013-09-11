@@ -42,5 +42,17 @@ namespace Four51.APISDK.Common
 				return 0;
 			}
 		}
+
+		public static bool BoolParseCatch(string input)
+		{
+			try
+			{
+				return Boolean.Parse(input);
+			}
+			catch
+			{
+				return false;
+			}
+		}
 	}
 }

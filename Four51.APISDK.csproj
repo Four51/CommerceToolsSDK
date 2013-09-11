@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="Common\Extensions\Extensions.cs" />
     <Compile Include="Common\Utils.cs" />
+    <Compile Include="Domain\Enums\CouponType.cs" />
     <Compile Include="Domain\Enums\OrderType.cs" />
     <Compile Include="Domain\Enums\PaymentType.cs" />
     <Compile Include="Domain\Enums\RequestProductType.cs" />

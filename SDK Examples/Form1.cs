@@ -659,7 +659,7 @@ namespace SDK_Examples
 				row.Cells[2].Value = o.Url;
 			}
 		}
-
+		//TODO: use as exmample to display order information
 		private void grid_orders_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
 		{
 			if (grid_orders.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
@@ -708,6 +708,18 @@ namespace SDK_Examples
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
+			}
+		}
+
+		private void btn_openxml_Click(object sender, EventArgs e)
+		{
+			DialogResult ok = openOrderXML.ShowDialog();
+			if (ok == System.Windows.Forms.DialogResult.OK)
+			{
+				var file = openOrderXML.OpenFile();
+				var order = new Four51WebSalesOrder();
+				order.Map(file);
+				txt_orderxml.Text = order.Request.FromUserIP;
 			}
 		}
 
