@@ -723,6 +723,11 @@ namespace SDK_Examples
 			}
 		}
 
+		private void InputForm_Load(object sender, EventArgs e)
+		{
+
+		}
+
 		//private void btn_productlist_get_Click(object sender, EventArgs e)
 		//{
 		//	grid_products.Rows.Clear();

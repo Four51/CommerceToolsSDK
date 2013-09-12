@@ -28,6 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.btn_address_delete = new System.Windows.Forms.Button();
 			this.Label13 = new System.Windows.Forms.Label();
 			this.Label12 = new System.Windows.Forms.Label();
@@ -697,7 +700,7 @@
 			this.TabControl1.MinimumSize = new System.Drawing.Size(708, 591);
 			this.TabControl1.Name = "TabControl1";
 			this.TabControl1.SelectedIndex = 0;
-			this.TabControl1.Size = new System.Drawing.Size(1957, 731);
+			this.TabControl1.Size = new System.Drawing.Size(1817, 731);
 			this.TabControl1.TabIndex = 1;
 			// 
 			// tab_product
@@ -758,7 +761,7 @@
 			this.tab_product.Location = new System.Drawing.Point(4, 25);
 			this.tab_product.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_product.Name = "tab_product";
-			this.tab_product.Size = new System.Drawing.Size(1949, 702);
+			this.tab_product.Size = new System.Drawing.Size(1809, 702);
 			this.tab_product.TabIndex = 4;
 			this.tab_product.Text = "Product";
 			this.tab_product.UseVisualStyleBackColor = true;
@@ -784,7 +787,7 @@
 			// label57
 			// 
 			this.label57.AutoSize = true;
-			this.label57.Location = new System.Drawing.Point(852, 241);
+			this.label57.Location = new System.Drawing.Point(714, 244);
 			this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label57.Name = "label57";
 			this.label57.Size = new System.Drawing.Size(110, 17);
@@ -794,7 +797,7 @@
 			// label64
 			// 
 			this.label64.AutoSize = true;
-			this.label64.Location = new System.Drawing.Point(852, 463);
+			this.label64.Location = new System.Drawing.Point(714, 466);
 			this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label64.Name = "label64";
 			this.label64.Size = new System.Drawing.Size(88, 17);
@@ -807,7 +810,7 @@
 			this.grid_pricebreaks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Price,
             this.Quantity});
-			this.grid_pricebreaks.Location = new System.Drawing.Point(860, 484);
+			this.grid_pricebreaks.Location = new System.Drawing.Point(722, 487);
 			this.grid_pricebreaks.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_pricebreaks.Name = "grid_pricebreaks";
 			this.grid_pricebreaks.Size = new System.Drawing.Size(299, 149);
@@ -843,10 +846,10 @@
             this.grid_priceschedule_assignmentinteropid,
             this.grid_priceschedule_assignmentlevel,
             this.grid_priceschedule_partyinteropid});
-			this.grid_priceschedules.Location = new System.Drawing.Point(860, 261);
+			this.grid_priceschedules.Location = new System.Drawing.Point(722, 264);
 			this.grid_priceschedules.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_priceschedules.Name = "grid_priceschedules";
-			this.grid_priceschedules.Size = new System.Drawing.Size(1077, 194);
+			this.grid_priceschedules.Size = new System.Drawing.Size(855, 194);
 			this.grid_priceschedules.TabIndex = 120;
 			// 
 			// grid_priceschedule_name
@@ -928,7 +931,7 @@
 			// label56
 			// 
 			this.label56.AutoSize = true;
-			this.label56.Location = new System.Drawing.Point(848, 18);
+			this.label56.Location = new System.Drawing.Point(714, 21);
 			this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label56.Name = "label56";
 			this.label56.Size = new System.Drawing.Size(60, 17);
@@ -937,10 +940,17 @@
 			// 
 			// grid_variants
 			// 
-			this.grid_variants.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.grid_variants.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.grid_variants.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.grid_variants.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.grid_variants.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.grid_variants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.grid_variants.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -953,11 +963,27 @@
             this.DecrementByReservedQuantity,
             this.FileName,
             this.grid_variant_delete});
-			this.grid_variants.Location = new System.Drawing.Point(856, 38);
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.grid_variants.DefaultCellStyle = dataGridViewCellStyle2;
+			this.grid_variants.Location = new System.Drawing.Point(722, 42);
 			this.grid_variants.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_variants.MultiSelect = false;
 			this.grid_variants.Name = "grid_variants";
-			this.grid_variants.Size = new System.Drawing.Size(1081, 197);
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.grid_variants.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			this.grid_variants.Size = new System.Drawing.Size(855, 197);
 			this.grid_variants.TabIndex = 97;
 			this.grid_variants.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_variants_CellContentClick);
 			// 
@@ -1042,7 +1068,7 @@
 			this.txt_product_inventorynotification.Location = new System.Drawing.Point(395, 454);
 			this.txt_product_inventorynotification.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_inventorynotification.Name = "txt_product_inventorynotification";
-			this.txt_product_inventorynotification.Size = new System.Drawing.Size(173, 22);
+			this.txt_product_inventorynotification.Size = new System.Drawing.Size(117, 22);
 			this.txt_product_inventorynotification.TabIndex = 95;
 			// 
 			// chk_product_active
@@ -1089,7 +1115,7 @@
 			// 
 			this.pnlImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.pnlImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.pnlImage.Location = new System.Drawing.Point(655, 194);
+			this.pnlImage.Location = new System.Drawing.Point(529, 196);
 			this.pnlImage.Margin = new System.Windows.Forms.Padding(4);
 			this.pnlImage.Name = "pnlImage";
 			this.pnlImage.Size = new System.Drawing.Size(175, 187);
@@ -1100,7 +1126,7 @@
 			// 
 			this.pnlThumbnail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.pnlThumbnail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.pnlThumbnail.Location = new System.Drawing.Point(655, 38);
+			this.pnlThumbnail.Location = new System.Drawing.Point(529, 40);
 			this.pnlThumbnail.Margin = new System.Windows.Forms.Padding(4);
 			this.pnlThumbnail.Name = "pnlThumbnail";
 			this.pnlThumbnail.Size = new System.Drawing.Size(132, 122);
@@ -1110,7 +1136,7 @@
 			// label52
 			// 
 			this.label52.AutoSize = true;
-			this.label52.Location = new System.Drawing.Point(651, 175);
+			this.label52.Location = new System.Drawing.Point(525, 177);
 			this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label52.Name = "label52";
 			this.label52.Size = new System.Drawing.Size(87, 17);
@@ -1120,7 +1146,7 @@
 			// label51
 			// 
 			this.label51.AutoSize = true;
-			this.label51.Location = new System.Drawing.Point(651, 18);
+			this.label51.Location = new System.Drawing.Point(525, 20);
 			this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label51.Name = "label51";
 			this.label51.Size = new System.Drawing.Size(74, 17);
@@ -1137,7 +1163,7 @@
 			this.ddl_product_type.Location = new System.Drawing.Point(233, 276);
 			this.ddl_product_type.Margin = new System.Windows.Forms.Padding(4);
 			this.ddl_product_type.Name = "ddl_product_type";
-			this.ddl_product_type.Size = new System.Drawing.Size(387, 24);
+			this.ddl_product_type.Size = new System.Drawing.Size(279, 24);
 			this.ddl_product_type.TabIndex = 86;
 			// 
 			// chk_product_allowexceed
@@ -1195,7 +1221,7 @@
 			this.txt_product_shipweight.Location = new System.Drawing.Point(231, 422);
 			this.txt_product_shipweight.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_shipweight.Name = "txt_product_shipweight";
-			this.txt_product_shipweight.Size = new System.Drawing.Size(389, 22);
+			this.txt_product_shipweight.Size = new System.Drawing.Size(281, 22);
 			this.txt_product_shipweight.TabIndex = 78;
 			// 
 			// label47
@@ -1213,7 +1239,7 @@
 			this.txt_product_quantitymultiplier.Location = new System.Drawing.Point(231, 390);
 			this.txt_product_quantitymultiplier.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_quantitymultiplier.Name = "txt_product_quantitymultiplier";
-			this.txt_product_quantitymultiplier.Size = new System.Drawing.Size(389, 22);
+			this.txt_product_quantitymultiplier.Size = new System.Drawing.Size(281, 22);
 			this.txt_product_quantitymultiplier.TabIndex = 76;
 			// 
 			// chk_product_pricerequests
@@ -1301,7 +1327,7 @@
 			this.txt_product_description.Location = new System.Drawing.Point(231, 242);
 			this.txt_product_description.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_description.Name = "txt_product_description";
-			this.txt_product_description.Size = new System.Drawing.Size(389, 22);
+			this.txt_product_description.Size = new System.Drawing.Size(281, 22);
 			this.txt_product_description.TabIndex = 65;
 			// 
 			// label41
@@ -1319,7 +1345,7 @@
 			this.txt_product_unitofmeasure.Location = new System.Drawing.Point(231, 210);
 			this.txt_product_unitofmeasure.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_unitofmeasure.Name = "txt_product_unitofmeasure";
-			this.txt_product_unitofmeasure.Size = new System.Drawing.Size(389, 22);
+			this.txt_product_unitofmeasure.Size = new System.Drawing.Size(281, 22);
 			this.txt_product_unitofmeasure.TabIndex = 63;
 			// 
 			// label40
@@ -1337,7 +1363,7 @@
 			this.txt_product_unspsc.Location = new System.Drawing.Point(231, 178);
 			this.txt_product_unspsc.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_unspsc.Name = "txt_product_unspsc";
-			this.txt_product_unspsc.Size = new System.Drawing.Size(389, 22);
+			this.txt_product_unspsc.Size = new System.Drawing.Size(281, 22);
 			this.txt_product_unspsc.TabIndex = 61;
 			// 
 			// label39
@@ -1355,7 +1381,7 @@
 			this.txt_product_name.Location = new System.Drawing.Point(231, 146);
 			this.txt_product_name.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_name.Name = "txt_product_name";
-			this.txt_product_name.Size = new System.Drawing.Size(389, 22);
+			this.txt_product_name.Size = new System.Drawing.Size(281, 22);
 			this.txt_product_name.TabIndex = 59;
 			// 
 			// label38
@@ -1373,7 +1399,7 @@
 			this.txt_product_productid.Location = new System.Drawing.Point(231, 114);
 			this.txt_product_productid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_productid.Name = "txt_product_productid";
-			this.txt_product_productid.Size = new System.Drawing.Size(389, 22);
+			this.txt_product_productid.Size = new System.Drawing.Size(281, 22);
 			this.txt_product_productid.TabIndex = 57;
 			// 
 			// label37
@@ -1391,7 +1417,7 @@
 			this.txt_product_newinteropid.Location = new System.Drawing.Point(231, 82);
 			this.txt_product_newinteropid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_newinteropid.Name = "txt_product_newinteropid";
-			this.txt_product_newinteropid.Size = new System.Drawing.Size(389, 22);
+			this.txt_product_newinteropid.Size = new System.Drawing.Size(281, 22);
 			this.txt_product_newinteropid.TabIndex = 55;
 			// 
 			// label35
@@ -1409,7 +1435,7 @@
 			this.txt_product_companyinteropid.Location = new System.Drawing.Point(231, 50);
 			this.txt_product_companyinteropid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_companyinteropid.Name = "txt_product_companyinteropid";
-			this.txt_product_companyinteropid.Size = new System.Drawing.Size(389, 22);
+			this.txt_product_companyinteropid.Size = new System.Drawing.Size(281, 22);
 			this.txt_product_companyinteropid.TabIndex = 53;
 			this.txt_product_companyinteropid.Text = "SteveTest";
 			// 
@@ -1428,17 +1454,17 @@
 			this.txt_product_interopid.Location = new System.Drawing.Point(231, 18);
 			this.txt_product_interopid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_interopid.Name = "txt_product_interopid";
-			this.txt_product_interopid.Size = new System.Drawing.Size(389, 22);
+			this.txt_product_interopid.Size = new System.Drawing.Size(281, 22);
 			this.txt_product_interopid.TabIndex = 51;
 			this.txt_product_interopid.TextChanged += new System.EventHandler(this.txt_product_interopid_TextChanged);
 			// 
 			// btn_product_random
 			// 
 			this.btn_product_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_product_random.Location = new System.Drawing.Point(16, 656);
+			this.btn_product_random.Location = new System.Drawing.Point(15, 656);
 			this.btn_product_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_product_random.Name = "btn_product_random";
-			this.btn_product_random.Size = new System.Drawing.Size(100, 28);
+			this.btn_product_random.Size = new System.Drawing.Size(124, 28);
 			this.btn_product_random.TabIndex = 50;
 			this.btn_product_random.Text = "Fill Random";
 			this.btn_product_random.UseVisualStyleBackColor = true;
@@ -1447,7 +1473,7 @@
 			// btn_product_delete
 			// 
 			this.btn_product_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_product_delete.Location = new System.Drawing.Point(1713, 656);
+			this.btn_product_delete.Location = new System.Drawing.Point(1357, 656);
 			this.btn_product_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_product_delete.Name = "btn_product_delete";
 			this.btn_product_delete.Size = new System.Drawing.Size(100, 28);
@@ -1459,7 +1485,7 @@
 			// btn_product_save
 			// 
 			this.btn_product_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_product_save.Location = new System.Drawing.Point(1833, 656);
+			this.btn_product_save.Location = new System.Drawing.Point(1477, 656);
 			this.btn_product_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_product_save.Name = "btn_product_save";
 			this.btn_product_save.Size = new System.Drawing.Size(100, 28);
@@ -2769,13 +2795,13 @@
 			this.txt_orders_result.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_orders_result.Multiline = true;
 			this.txt_orders_result.Name = "txt_orders_result";
-			this.txt_orders_result.Size = new System.Drawing.Size(1253, 474);
+			this.txt_orders_result.Size = new System.Drawing.Size(928, 291);
 			this.txt_orders_result.TabIndex = 130;
 			// 
 			// btn_orderrequest_get
 			// 
 			this.btn_orderrequest_get.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_orderrequest_get.Location = new System.Drawing.Point(1169, 166);
+			this.btn_orderrequest_get.Location = new System.Drawing.Point(843, 166);
 			this.btn_orderrequest_get.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_orderrequest_get.Name = "btn_orderrequest_get";
 			this.btn_orderrequest_get.Size = new System.Drawing.Size(100, 28);
@@ -2797,7 +2823,7 @@
 			this.grid_orders.Location = new System.Drawing.Point(8, 7);
 			this.grid_orders.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_orders.Name = "grid_orders";
-			this.grid_orders.Size = new System.Drawing.Size(1261, 151);
+			this.grid_orders.Size = new System.Drawing.Size(935, 151);
 			this.grid_orders.TabIndex = 123;
 			this.grid_orders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_orders_CellContentClick_1);
 			// 
@@ -2846,7 +2872,7 @@
 			this.txt_orderxml.Name = "txt_orderxml";
 			this.txt_orderxml.ReadOnly = true;
 			this.txt_orderxml.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txt_orderxml.Size = new System.Drawing.Size(1253, 474);
+			this.txt_orderxml.Size = new System.Drawing.Size(932, 474);
 			this.txt_orderxml.TabIndex = 131;
 			// 
 			// btn_openxml
@@ -2909,7 +2935,7 @@
 			this.dataGridView1.Location = new System.Drawing.Point(15, 30);
 			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
 			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(1077, 411);
+			this.dataGridView1.Size = new System.Drawing.Size(927, 411);
 			this.dataGridView1.TabIndex = 128;
 			// 
 			// Price_ProductInteropID
@@ -3254,7 +3280,7 @@
 			this.txt_sharedsecret.Location = new System.Drawing.Point(172, 6);
 			this.txt_sharedsecret.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_sharedsecret.Name = "txt_sharedsecret";
-			this.txt_sharedsecret.Size = new System.Drawing.Size(1780, 22);
+			this.txt_sharedsecret.Size = new System.Drawing.Size(1640, 22);
 			this.txt_sharedsecret.TabIndex = 17;
 			this.txt_sharedsecret.Text = "8k1wyYuAq5cIVhaMGtEczw==";
 			// 
@@ -3265,7 +3291,7 @@
 			this.txt_serviceid.Location = new System.Drawing.Point(172, 38);
 			this.txt_serviceid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_serviceid.Name = "txt_serviceid";
-			this.txt_serviceid.Size = new System.Drawing.Size(1780, 22);
+			this.txt_serviceid.Size = new System.Drawing.Size(1640, 22);
 			this.txt_serviceid.TabIndex = 19;
 			this.txt_serviceid.Text = "DX6SvMQ36jDNht3uRPXAcHnq1O9xPuXs70SoYpZ53HJmgeXc3-pxumQ-e-e";
 			// 
@@ -3287,15 +3313,18 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1957, 817);
+			this.ClientSize = new System.Drawing.Size(1817, 817);
 			this.Controls.Add(this.txt_serviceid);
 			this.Controls.Add(this.label15);
 			this.Controls.Add(this.txt_sharedsecret);
 			this.Controls.Add(this.label14);
 			this.Controls.Add(this.TabControl1);
 			this.Margin = new System.Windows.Forms.Padding(4);
+			this.MaximizeBox = false;
 			this.Name = "InputForm";
 			this.Text = "SDK Examples";
+			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+			this.Load += new System.EventHandler(this.InputForm_Load);
 			this.tab_address.ResumeLayout(false);
 			this.GroupBox1.ResumeLayout(false);
 			this.GroupBox1.PerformLayout();

@@ -1369,7 +1369,7 @@ namespace Four51.APISDK.Services
 		private List<SalesOrderCouponCategory> _list = new List<SalesOrderCouponCategory>();
 		public SalesOrderCouponCategories(IEnumerable<XElement> category)
 		{
-			var categories = category.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "Product");
+			var categories = category.Elements("Extrinsic").Where(x => x.Attribute("name").Value == "Category");
 			foreach (XElement el in categories)
 			{
 				this.Add(new SalesOrderCouponCategory(el));
