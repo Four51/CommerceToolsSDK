@@ -349,8 +349,8 @@
 			// 
 			// btn_address_delete
 			// 
-			this.btn_address_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_address_delete.Location = new System.Drawing.Point(353, 432);
+			this.btn_address_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_address_delete.Location = new System.Drawing.Point(349, 429);
 			this.btn_address_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_address_delete.Name = "btn_address_delete";
 			this.btn_address_delete.Size = new System.Drawing.Size(100, 28);
@@ -596,8 +596,8 @@
 			// 
 			// btn_save
 			// 
-			this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_save.Location = new System.Drawing.Point(473, 432);
+			this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_save.Location = new System.Drawing.Point(469, 429);
 			this.btn_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_save.Name = "btn_save";
 			this.btn_save.Size = new System.Drawing.Size(100, 28);
@@ -613,7 +613,7 @@
 			this.tab_address.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_address.Name = "tab_address";
 			this.tab_address.Padding = new System.Windows.Forms.Padding(4);
-			this.tab_address.Size = new System.Drawing.Size(1949, 702);
+			this.tab_address.Size = new System.Drawing.Size(1809, 702);
 			this.tab_address.TabIndex = 0;
 			this.tab_address.Text = "Address";
 			this.tab_address.UseVisualStyleBackColor = true;
@@ -655,14 +655,14 @@
 			this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.GroupBox1.Name = "GroupBox1";
 			this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
-			this.GroupBox1.Size = new System.Drawing.Size(1941, 694);
+			this.GroupBox1.Size = new System.Drawing.Size(1801, 694);
 			this.GroupBox1.TabIndex = 1;
 			this.GroupBox1.TabStop = false;
 			// 
 			// btn_address_random
 			// 
 			this.btn_address_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_address_random.Location = new System.Drawing.Point(13, 432);
+			this.btn_address_random.Location = new System.Drawing.Point(-127, 432);
 			this.btn_address_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_address_random.Name = "btn_address_random";
 			this.btn_address_random.Size = new System.Drawing.Size(100, 28);
@@ -940,7 +940,8 @@
 			// 
 			// grid_variants
 			// 
-			this.grid_variants.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.grid_variants.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.grid_variants.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.grid_variants.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1460,7 +1461,6 @@
 			// 
 			// btn_product_random
 			// 
-			this.btn_product_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_product_random.Location = new System.Drawing.Point(15, 656);
 			this.btn_product_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_product_random.Name = "btn_product_random";
@@ -1472,7 +1472,7 @@
 			// 
 			// btn_product_delete
 			// 
-			this.btn_product_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_product_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_product_delete.Location = new System.Drawing.Point(1357, 656);
 			this.btn_product_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_product_delete.Name = "btn_product_delete";
@@ -1484,7 +1484,7 @@
 			// 
 			// btn_product_save
 			// 
-			this.btn_product_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_product_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_product_save.Location = new System.Drawing.Point(1477, 656);
 			this.btn_product_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_product_save.Name = "btn_product_save";
@@ -1530,7 +1530,7 @@
 			this.tab_user.Location = new System.Drawing.Point(4, 25);
 			this.tab_user.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_user.Name = "tab_user";
-			this.tab_user.Size = new System.Drawing.Size(1949, 702);
+			this.tab_user.Size = new System.Drawing.Size(1809, 702);
 			this.tab_user.TabIndex = 3;
 			this.tab_user.Text = "User";
 			this.tab_user.UseVisualStyleBackColor = true;
@@ -1558,6 +1558,7 @@
 			this.grid_user_orderfields.Name = "grid_user_orderfields";
 			this.grid_user_orderfields.Size = new System.Drawing.Size(351, 116);
 			this.grid_user_orderfields.TabIndex = 131;
+			this.grid_user_orderfields.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_user_orderfields_CellContentClick);
 			// 
 			// dataGridViewTextBoxColumn8
 			// 
@@ -1627,7 +1628,7 @@
 			this.grid_user_costcenters.Location = new System.Drawing.Point(16, 501);
 			this.grid_user_costcenters.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_user_costcenters.Name = "grid_user_costcenters";
-			this.grid_user_costcenters.Size = new System.Drawing.Size(240, 116);
+			this.grid_user_costcenters.Size = new System.Drawing.Size(281, 116);
 			this.grid_user_costcenters.TabIndex = 127;
 			// 
 			// dataGridViewTextBoxColumn6
@@ -1829,7 +1830,6 @@
 			// 
 			// btn_user_random
 			// 
-			this.btn_user_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_user_random.Location = new System.Drawing.Point(12, 624);
 			this.btn_user_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_user_random.Name = "btn_user_random";
@@ -1841,7 +1841,6 @@
 			// 
 			// btn_user_delete
 			// 
-			this.btn_user_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_user_delete.Location = new System.Drawing.Point(436, 624);
 			this.btn_user_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_user_delete.Name = "btn_user_delete";
@@ -1853,7 +1852,6 @@
 			// 
 			// btn_user_save
 			// 
-			this.btn_user_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_user_save.Location = new System.Drawing.Point(556, 624);
 			this.btn_user_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_user_save.Name = "btn_user_save";
@@ -1916,7 +1914,7 @@
 			this.tab_costcenter.Location = new System.Drawing.Point(4, 25);
 			this.tab_costcenter.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_costcenter.Name = "tab_costcenter";
-			this.tab_costcenter.Size = new System.Drawing.Size(1949, 702);
+			this.tab_costcenter.Size = new System.Drawing.Size(1809, 702);
 			this.tab_costcenter.TabIndex = 1;
 			this.tab_costcenter.Text = "Cost Center";
 			this.tab_costcenter.UseVisualStyleBackColor = true;
@@ -1996,7 +1994,7 @@
 			// 
 			// btn_costcenter_random
 			// 
-			this.btn_costcenter_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_costcenter_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_costcenter_random.Location = new System.Drawing.Point(27, 167);
 			this.btn_costcenter_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_costcenter_random.Name = "btn_costcenter_random";
@@ -2008,7 +2006,7 @@
 			// 
 			// btn_costcenter_delete
 			// 
-			this.btn_costcenter_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_costcenter_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_costcenter_delete.Location = new System.Drawing.Point(367, 167);
 			this.btn_costcenter_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_costcenter_delete.Name = "btn_costcenter_delete";
@@ -2020,7 +2018,7 @@
 			// 
 			// btn_costcenter_save
 			// 
-			this.btn_costcenter_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_costcenter_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_costcenter_save.Location = new System.Drawing.Point(487, 167);
 			this.btn_costcenter_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_costcenter_save.Name = "btn_costcenter_save";
@@ -2050,7 +2048,7 @@
 			this.tab_group.Location = new System.Drawing.Point(4, 25);
 			this.tab_group.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_group.Name = "tab_group";
-			this.tab_group.Size = new System.Drawing.Size(1949, 702);
+			this.tab_group.Size = new System.Drawing.Size(1809, 702);
 			this.tab_group.TabIndex = 2;
 			this.tab_group.Text = "Group";
 			this.tab_group.UseVisualStyleBackColor = true;
@@ -2193,7 +2191,8 @@
 			// 
 			// btn_group_random
 			// 
-			this.btn_group_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_group_random.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_group_random.Location = new System.Drawing.Point(25, 331);
 			this.btn_group_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_group_random.Name = "btn_group_random";
@@ -2205,7 +2204,8 @@
 			// 
 			// btn_group_delete
 			// 
-			this.btn_group_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_group_delete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_group_delete.Location = new System.Drawing.Point(365, 331);
 			this.btn_group_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_group_delete.Name = "btn_group_delete";
@@ -2217,7 +2217,8 @@
 			// 
 			// btn_group_save
 			// 
-			this.btn_group_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_group_save.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_group_save.Location = new System.Drawing.Point(485, 331);
 			this.btn_group_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_group_save.Name = "btn_group_save";
@@ -2257,7 +2258,7 @@
 			this.tab_spendingaccount.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_spendingaccount.Name = "tab_spendingaccount";
 			this.tab_spendingaccount.Padding = new System.Windows.Forms.Padding(4);
-			this.tab_spendingaccount.Size = new System.Drawing.Size(1949, 702);
+			this.tab_spendingaccount.Size = new System.Drawing.Size(1809, 702);
 			this.tab_spendingaccount.TabIndex = 5;
 			this.tab_spendingaccount.Text = "Spending Account";
 			this.tab_spendingaccount.UseVisualStyleBackColor = true;
@@ -2276,7 +2277,7 @@
 			// 
 			// btn_spendingaccount_random
 			// 
-			this.btn_spendingaccount_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_spendingaccount_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_spendingaccount_random.Location = new System.Drawing.Point(15, 363);
 			this.btn_spendingaccount_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_spendingaccount_random.Name = "btn_spendingaccount_random";
@@ -2288,7 +2289,7 @@
 			// 
 			// btn_spendingaccount_delete
 			// 
-			this.btn_spendingaccount_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_spendingaccount_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_spendingaccount_delete.Location = new System.Drawing.Point(401, 363);
 			this.btn_spendingaccount_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_spendingaccount_delete.Name = "btn_spendingaccount_delete";
@@ -2300,7 +2301,7 @@
 			// 
 			// btn_spendingaccount_save
 			// 
-			this.btn_spendingaccount_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_spendingaccount_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_spendingaccount_save.Location = new System.Drawing.Point(521, 363);
 			this.btn_spendingaccount_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_spendingaccount_save.Name = "btn_spendingaccount_save";
@@ -2519,10 +2520,11 @@
 			this.tab_orderfields.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_orderfields.Name = "tab_orderfields";
 			this.tab_orderfields.Padding = new System.Windows.Forms.Padding(4);
-			this.tab_orderfields.Size = new System.Drawing.Size(1949, 702);
+			this.tab_orderfields.Size = new System.Drawing.Size(1809, 702);
 			this.tab_orderfields.TabIndex = 6;
 			this.tab_orderfields.Text = "Order Fields";
 			this.tab_orderfields.UseVisualStyleBackColor = true;
+			this.tab_orderfields.Click += new System.EventHandler(this.tab_orderfields_Click);
 			// 
 			// label79
 			// 
@@ -2544,7 +2546,7 @@
 			// 
 			// btn_orderfields_random
 			// 
-			this.btn_orderfields_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_orderfields_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_orderfields_random.Location = new System.Drawing.Point(27, 454);
 			this.btn_orderfields_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_orderfields_random.Name = "btn_orderfields_random";
@@ -2556,7 +2558,7 @@
 			// 
 			// btn_orderfields_delete
 			// 
-			this.btn_orderfields_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_orderfields_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_orderfields_delete.Location = new System.Drawing.Point(400, 454);
 			this.btn_orderfields_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_orderfields_delete.Name = "btn_orderfields_delete";
@@ -2568,7 +2570,7 @@
 			// 
 			// btn_orderfields_save
 			// 
-			this.btn_orderfields_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_orderfields_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_orderfields_save.Location = new System.Drawing.Point(520, 454);
 			this.btn_orderfields_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_orderfields_save.Name = "btn_orderfields_save";
@@ -2784,7 +2786,7 @@
 			this.tab_orderrequest.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_orderrequest.Name = "tab_orderrequest";
 			this.tab_orderrequest.Padding = new System.Windows.Forms.Padding(4);
-			this.tab_orderrequest.Size = new System.Drawing.Size(1949, 702);
+			this.tab_orderrequest.Size = new System.Drawing.Size(1809, 702);
 			this.tab_orderrequest.TabIndex = 7;
 			this.tab_orderrequest.Text = "Order Request";
 			this.tab_orderrequest.UseVisualStyleBackColor = true;
@@ -2800,7 +2802,7 @@
 			// 
 			// btn_orderrequest_get
 			// 
-			this.btn_orderrequest_get.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_orderrequest_get.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_orderrequest_get.Location = new System.Drawing.Point(843, 166);
 			this.btn_orderrequest_get.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_orderrequest_get.Name = "btn_orderrequest_get";
@@ -2859,7 +2861,7 @@
 			this.tab_orderxml.Controls.Add(this.btn_openxml);
 			this.tab_orderxml.Location = new System.Drawing.Point(4, 25);
 			this.tab_orderxml.Name = "tab_orderxml";
-			this.tab_orderxml.Size = new System.Drawing.Size(1949, 702);
+			this.tab_orderxml.Size = new System.Drawing.Size(1809, 702);
 			this.tab_orderxml.TabIndex = 10;
 			this.tab_orderxml.Text = "Order XML";
 			this.tab_orderxml.UseVisualStyleBackColor = true;
@@ -2895,15 +2897,15 @@
 			this.tab_pricescheduleassignments.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_pricescheduleassignments.Name = "tab_pricescheduleassignments";
 			this.tab_pricescheduleassignments.Padding = new System.Windows.Forms.Padding(4);
-			this.tab_pricescheduleassignments.Size = new System.Drawing.Size(1949, 702);
+			this.tab_pricescheduleassignments.Size = new System.Drawing.Size(1809, 702);
 			this.tab_pricescheduleassignments.TabIndex = 8;
 			this.tab_pricescheduleassignments.Text = "Price Schedule Assignments";
 			this.tab_pricescheduleassignments.UseVisualStyleBackColor = true;
 			// 
 			// button1
 			// 
-			this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.button1.Location = new System.Drawing.Point(992, 448);
+			this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.button1.Location = new System.Drawing.Point(842, 459);
 			this.button1.Margin = new System.Windows.Forms.Padding(4);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(100, 28);
@@ -3010,14 +3012,15 @@
 			this.tabShipNotice.Margin = new System.Windows.Forms.Padding(4);
 			this.tabShipNotice.Name = "tabShipNotice";
 			this.tabShipNotice.Padding = new System.Windows.Forms.Padding(4);
-			this.tabShipNotice.Size = new System.Drawing.Size(1949, 702);
+			this.tabShipNotice.Size = new System.Drawing.Size(1809, 702);
 			this.tabShipNotice.TabIndex = 9;
 			this.tabShipNotice.Text = "Ship Notice";
 			this.tabShipNotice.UseVisualStyleBackColor = true;
+			this.tabShipNotice.Click += new System.EventHandler(this.tabShipNotice_Click);
 			// 
 			// btn_ship_random
 			// 
-			this.btn_ship_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_ship_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_ship_random.Location = new System.Drawing.Point(23, 523);
 			this.btn_ship_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_ship_random.Name = "btn_ship_random";
@@ -3029,7 +3032,7 @@
 			// 
 			// btn_ship_save
 			// 
-			this.btn_ship_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_ship_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_ship_save.Location = new System.Drawing.Point(516, 523);
 			this.btn_ship_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_ship_save.Name = "btn_ship_save";
@@ -3323,7 +3326,6 @@
 			this.MaximizeBox = false;
 			this.Name = "InputForm";
 			this.Text = "SDK Examples";
-			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.InputForm_Load);
 			this.tab_address.ResumeLayout(false);
 			this.GroupBox1.ResumeLayout(false);
