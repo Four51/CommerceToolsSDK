@@ -269,6 +269,9 @@
 			this.DownloadStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Url = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+			this.tab_orderxml = new System.Windows.Forms.TabPage();
+			this.txt_orderxml = new System.Windows.Forms.TextBox();
+			this.btn_openxml = new System.Windows.Forms.Button();
 			this.tab_pricescheduleassignments = new System.Windows.Forms.TabPage();
 			this.button1 = new System.Windows.Forms.Button();
 			this.label81 = new System.Windows.Forms.Label();
@@ -314,10 +317,7 @@
 			this.openLargeImage = new System.Windows.Forms.OpenFileDialog();
 			this.openSmallImage = new System.Windows.Forms.OpenFileDialog();
 			this.openVariantImage = new System.Windows.Forms.OpenFileDialog();
-			this.tab_orderxml = new System.Windows.Forms.TabPage();
 			this.openOrderXML = new System.Windows.Forms.OpenFileDialog();
-			this.btn_openxml = new System.Windows.Forms.Button();
-			this.txt_orderxml = new System.Windows.Forms.TextBox();
 			this.tab_address.SuspendLayout();
 			this.GroupBox1.SuspendLayout();
 			this.TabControl1.SuspendLayout();
@@ -338,17 +338,17 @@
 			((System.ComponentModel.ISupportInitialize)(this.grid_orderfields_options)).BeginInit();
 			this.tab_orderrequest.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.grid_orders)).BeginInit();
+			this.tab_orderxml.SuspendLayout();
 			this.tab_pricescheduleassignments.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.tabShipNotice.SuspendLayout();
-			this.tab_orderxml.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// btn_address_delete
 			// 
 			this.btn_address_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_address_delete.Location = new System.Drawing.Point(353, 432);
-			this.btn_address_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_address_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_address_delete.Name = "btn_address_delete";
 			this.btn_address_delete.Size = new System.Drawing.Size(100, 28);
 			this.btn_address_delete.TabIndex = 28;
@@ -489,7 +489,7 @@
 			// txt_address_phonenumber
 			// 
 			this.txt_address_phonenumber.Location = new System.Drawing.Point(180, 399);
-			this.txt_address_phonenumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_phonenumber.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_phonenumber.Name = "txt_address_phonenumber";
 			this.txt_address_phonenumber.Size = new System.Drawing.Size(195, 22);
 			this.txt_address_phonenumber.TabIndex = 14;
@@ -497,7 +497,7 @@
 			// txt_address_country
 			// 
 			this.txt_address_country.Location = new System.Drawing.Point(180, 367);
-			this.txt_address_country.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_country.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_country.Name = "txt_address_country";
 			this.txt_address_country.Size = new System.Drawing.Size(68, 22);
 			this.txt_address_country.TabIndex = 13;
@@ -505,7 +505,7 @@
 			// txt_address_zip
 			// 
 			this.txt_address_zip.Location = new System.Drawing.Point(180, 335);
-			this.txt_address_zip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_zip.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_zip.Name = "txt_address_zip";
 			this.txt_address_zip.Size = new System.Drawing.Size(128, 22);
 			this.txt_address_zip.TabIndex = 12;
@@ -513,7 +513,7 @@
 			// txt_address_city
 			// 
 			this.txt_address_city.Location = new System.Drawing.Point(180, 271);
-			this.txt_address_city.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_city.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_city.Name = "txt_address_city";
 			this.txt_address_city.Size = new System.Drawing.Size(389, 22);
 			this.txt_address_city.TabIndex = 10;
@@ -521,7 +521,7 @@
 			// txt_address_addresslinetwo
 			// 
 			this.txt_address_addresslinetwo.Location = new System.Drawing.Point(180, 239);
-			this.txt_address_addresslinetwo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_addresslinetwo.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_addresslinetwo.Name = "txt_address_addresslinetwo";
 			this.txt_address_addresslinetwo.Size = new System.Drawing.Size(389, 22);
 			this.txt_address_addresslinetwo.TabIndex = 9;
@@ -529,7 +529,7 @@
 			// txt_address_addresslineone
 			// 
 			this.txt_address_addresslineone.Location = new System.Drawing.Point(180, 207);
-			this.txt_address_addresslineone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_addresslineone.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_addresslineone.Name = "txt_address_addresslineone";
 			this.txt_address_addresslineone.Size = new System.Drawing.Size(389, 22);
 			this.txt_address_addresslineone.TabIndex = 8;
@@ -537,7 +537,7 @@
 			// txt_address_companyname
 			// 
 			this.txt_address_companyname.Location = new System.Drawing.Point(180, 175);
-			this.txt_address_companyname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_companyname.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_companyname.Name = "txt_address_companyname";
 			this.txt_address_companyname.Size = new System.Drawing.Size(389, 22);
 			this.txt_address_companyname.TabIndex = 7;
@@ -545,7 +545,7 @@
 			// txt_address_lastname
 			// 
 			this.txt_address_lastname.Location = new System.Drawing.Point(180, 143);
-			this.txt_address_lastname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_lastname.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_lastname.Name = "txt_address_lastname";
 			this.txt_address_lastname.Size = new System.Drawing.Size(389, 22);
 			this.txt_address_lastname.TabIndex = 6;
@@ -553,7 +553,7 @@
 			// txt_address_firstname
 			// 
 			this.txt_address_firstname.Location = new System.Drawing.Point(180, 111);
-			this.txt_address_firstname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_firstname.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_firstname.Name = "txt_address_firstname";
 			this.txt_address_firstname.Size = new System.Drawing.Size(389, 22);
 			this.txt_address_firstname.TabIndex = 5;
@@ -561,7 +561,7 @@
 			// txt_address_name
 			// 
 			this.txt_address_name.Location = new System.Drawing.Point(180, 79);
-			this.txt_address_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_name.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_name.Name = "txt_address_name";
 			this.txt_address_name.Size = new System.Drawing.Size(389, 22);
 			this.txt_address_name.TabIndex = 4;
@@ -569,7 +569,7 @@
 			// txt_address_companyinteropid
 			// 
 			this.txt_address_companyinteropid.Location = new System.Drawing.Point(180, 47);
-			this.txt_address_companyinteropid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_companyinteropid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_companyinteropid.Name = "txt_address_companyinteropid";
 			this.txt_address_companyinteropid.Size = new System.Drawing.Size(389, 22);
 			this.txt_address_companyinteropid.TabIndex = 3;
@@ -578,7 +578,7 @@
 			// txt_address_interopid
 			// 
 			this.txt_address_interopid.Location = new System.Drawing.Point(180, 15);
-			this.txt_address_interopid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_interopid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_interopid.Name = "txt_address_interopid";
 			this.txt_address_interopid.Size = new System.Drawing.Size(389, 22);
 			this.txt_address_interopid.TabIndex = 2;
@@ -586,7 +586,7 @@
 			// txt_interopid
 			// 
 			this.txt_interopid.Location = new System.Drawing.Point(180, 15);
-			this.txt_interopid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_interopid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_interopid.Name = "txt_interopid";
 			this.txt_interopid.Size = new System.Drawing.Size(389, 22);
 			this.txt_interopid.TabIndex = 2;
@@ -595,7 +595,7 @@
 			// 
 			this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_save.Location = new System.Drawing.Point(473, 432);
-			this.btn_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_save.Name = "btn_save";
 			this.btn_save.Size = new System.Drawing.Size(100, 28);
 			this.btn_save.TabIndex = 1;
@@ -607,9 +607,9 @@
 			// 
 			this.tab_address.Controls.Add(this.GroupBox1);
 			this.tab_address.Location = new System.Drawing.Point(4, 25);
-			this.tab_address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_address.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_address.Name = "tab_address";
-			this.tab_address.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_address.Padding = new System.Windows.Forms.Padding(4);
 			this.tab_address.Size = new System.Drawing.Size(1949, 702);
 			this.tab_address.TabIndex = 0;
 			this.tab_address.Text = "Address";
@@ -649,9 +649,9 @@
 			this.GroupBox1.Controls.Add(this.btn_save);
 			this.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.GroupBox1.Location = new System.Drawing.Point(4, 4);
-			this.GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.GroupBox1.Name = "GroupBox1";
-			this.GroupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
 			this.GroupBox1.Size = new System.Drawing.Size(1941, 694);
 			this.GroupBox1.TabIndex = 1;
 			this.GroupBox1.TabStop = false;
@@ -660,7 +660,7 @@
 			// 
 			this.btn_address_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_address_random.Location = new System.Drawing.Point(13, 432);
-			this.btn_address_random.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_address_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_address_random.Name = "btn_address_random";
 			this.btn_address_random.Size = new System.Drawing.Size(100, 28);
 			this.btn_address_random.TabIndex = 29;
@@ -671,7 +671,7 @@
 			// txt_address_state
 			// 
 			this.txt_address_state.Location = new System.Drawing.Point(180, 303);
-			this.txt_address_state.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_address_state.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_address_state.Name = "txt_address_state";
 			this.txt_address_state.Size = new System.Drawing.Size(68, 22);
 			this.txt_address_state.TabIndex = 11;
@@ -693,7 +693,7 @@
 			this.TabControl1.Controls.Add(this.tab_pricescheduleassignments);
 			this.TabControl1.Controls.Add(this.tabShipNotice);
 			this.TabControl1.Location = new System.Drawing.Point(0, 84);
-			this.TabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.TabControl1.Margin = new System.Windows.Forms.Padding(4);
 			this.TabControl1.MinimumSize = new System.Drawing.Size(708, 591);
 			this.TabControl1.Name = "TabControl1";
 			this.TabControl1.SelectedIndex = 0;
@@ -756,7 +756,7 @@
 			this.tab_product.Controls.Add(this.btn_product_delete);
 			this.tab_product.Controls.Add(this.btn_product_save);
 			this.tab_product.Location = new System.Drawing.Point(4, 25);
-			this.tab_product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_product.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_product.Name = "tab_product";
 			this.tab_product.Size = new System.Drawing.Size(1949, 702);
 			this.tab_product.TabIndex = 4;
@@ -776,7 +776,7 @@
 			// txt_product_quantity
 			// 
 			this.txt_product_quantity.Location = new System.Drawing.Point(231, 486);
-			this.txt_product_quantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_product_quantity.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_quantity.Name = "txt_product_quantity";
 			this.txt_product_quantity.Size = new System.Drawing.Size(173, 22);
 			this.txt_product_quantity.TabIndex = 124;
@@ -808,7 +808,7 @@
             this.Price,
             this.Quantity});
 			this.grid_pricebreaks.Location = new System.Drawing.Point(860, 484);
-			this.grid_pricebreaks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.grid_pricebreaks.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_pricebreaks.Name = "grid_pricebreaks";
 			this.grid_pricebreaks.Size = new System.Drawing.Size(299, 149);
 			this.grid_pricebreaks.TabIndex = 121;
@@ -844,7 +844,7 @@
             this.grid_priceschedule_assignmentlevel,
             this.grid_priceschedule_partyinteropid});
 			this.grid_priceschedules.Location = new System.Drawing.Point(860, 261);
-			this.grid_priceschedules.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.grid_priceschedules.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_priceschedules.Name = "grid_priceschedules";
 			this.grid_priceschedules.Size = new System.Drawing.Size(1077, 194);
 			this.grid_priceschedules.TabIndex = 120;
@@ -954,7 +954,7 @@
             this.FileName,
             this.grid_variant_delete});
 			this.grid_variants.Location = new System.Drawing.Point(856, 38);
-			this.grid_variants.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.grid_variants.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_variants.MultiSelect = false;
 			this.grid_variants.Name = "grid_variants";
 			this.grid_variants.Size = new System.Drawing.Size(1081, 197);
@@ -1040,7 +1040,7 @@
 			// txt_product_inventorynotification
 			// 
 			this.txt_product_inventorynotification.Location = new System.Drawing.Point(395, 454);
-			this.txt_product_inventorynotification.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_product_inventorynotification.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_inventorynotification.Name = "txt_product_inventorynotification";
 			this.txt_product_inventorynotification.Size = new System.Drawing.Size(173, 22);
 			this.txt_product_inventorynotification.TabIndex = 95;
@@ -1049,7 +1049,7 @@
 			// 
 			this.chk_product_active.AutoSize = true;
 			this.chk_product_active.Location = new System.Drawing.Point(231, 574);
-			this.chk_product_active.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chk_product_active.Margin = new System.Windows.Forms.Padding(4);
 			this.chk_product_active.Name = "chk_product_active";
 			this.chk_product_active.Size = new System.Drawing.Size(18, 17);
 			this.chk_product_active.TabIndex = 94;
@@ -1069,7 +1069,7 @@
 			// 
 			this.chk_product_displayinventory.AutoSize = true;
 			this.chk_product_displayinventory.Location = new System.Drawing.Point(231, 545);
-			this.chk_product_displayinventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chk_product_displayinventory.Margin = new System.Windows.Forms.Padding(4);
 			this.chk_product_displayinventory.Name = "chk_product_displayinventory";
 			this.chk_product_displayinventory.Size = new System.Drawing.Size(18, 17);
 			this.chk_product_displayinventory.TabIndex = 92;
@@ -1090,7 +1090,7 @@
 			this.pnlImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.pnlImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.pnlImage.Location = new System.Drawing.Point(655, 194);
-			this.pnlImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pnlImage.Margin = new System.Windows.Forms.Padding(4);
 			this.pnlImage.Name = "pnlImage";
 			this.pnlImage.Size = new System.Drawing.Size(175, 187);
 			this.pnlImage.TabIndex = 90;
@@ -1101,7 +1101,7 @@
 			this.pnlThumbnail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.pnlThumbnail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.pnlThumbnail.Location = new System.Drawing.Point(655, 38);
-			this.pnlThumbnail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pnlThumbnail.Margin = new System.Windows.Forms.Padding(4);
 			this.pnlThumbnail.Name = "pnlThumbnail";
 			this.pnlThumbnail.Size = new System.Drawing.Size(132, 122);
 			this.pnlThumbnail.TabIndex = 89;
@@ -1135,7 +1135,7 @@
             "Variable Text",
             "Kit"});
 			this.ddl_product_type.Location = new System.Drawing.Point(233, 276);
-			this.ddl_product_type.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ddl_product_type.Margin = new System.Windows.Forms.Padding(4);
 			this.ddl_product_type.Name = "ddl_product_type";
 			this.ddl_product_type.Size = new System.Drawing.Size(387, 24);
 			this.ddl_product_type.TabIndex = 86;
@@ -1144,7 +1144,7 @@
 			// 
 			this.chk_product_allowexceed.AutoSize = true;
 			this.chk_product_allowexceed.Location = new System.Drawing.Point(231, 518);
-			this.chk_product_allowexceed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chk_product_allowexceed.Margin = new System.Windows.Forms.Padding(4);
 			this.chk_product_allowexceed.Name = "chk_product_allowexceed";
 			this.chk_product_allowexceed.Size = new System.Drawing.Size(18, 17);
 			this.chk_product_allowexceed.TabIndex = 84;
@@ -1164,7 +1164,7 @@
 			// 
 			this.chk_product_trackinventory.AutoSize = true;
 			this.chk_product_trackinventory.Location = new System.Drawing.Point(231, 458);
-			this.chk_product_trackinventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chk_product_trackinventory.Margin = new System.Windows.Forms.Padding(4);
 			this.chk_product_trackinventory.Name = "chk_product_trackinventory";
 			this.chk_product_trackinventory.Size = new System.Drawing.Size(18, 17);
 			this.chk_product_trackinventory.TabIndex = 82;
@@ -1193,7 +1193,7 @@
 			// txt_product_shipweight
 			// 
 			this.txt_product_shipweight.Location = new System.Drawing.Point(231, 422);
-			this.txt_product_shipweight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_product_shipweight.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_shipweight.Name = "txt_product_shipweight";
 			this.txt_product_shipweight.Size = new System.Drawing.Size(389, 22);
 			this.txt_product_shipweight.TabIndex = 78;
@@ -1211,7 +1211,7 @@
 			// txt_product_quantitymultiplier
 			// 
 			this.txt_product_quantitymultiplier.Location = new System.Drawing.Point(231, 390);
-			this.txt_product_quantitymultiplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_product_quantitymultiplier.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_quantitymultiplier.Name = "txt_product_quantitymultiplier";
 			this.txt_product_quantitymultiplier.Size = new System.Drawing.Size(389, 22);
 			this.txt_product_quantitymultiplier.TabIndex = 76;
@@ -1220,7 +1220,7 @@
 			// 
 			this.chk_product_pricerequests.AutoSize = true;
 			this.chk_product_pricerequests.Location = new System.Drawing.Point(233, 366);
-			this.chk_product_pricerequests.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chk_product_pricerequests.Margin = new System.Windows.Forms.Padding(4);
 			this.chk_product_pricerequests.Name = "chk_product_pricerequests";
 			this.chk_product_pricerequests.Size = new System.Drawing.Size(18, 17);
 			this.chk_product_pricerequests.TabIndex = 75;
@@ -1240,7 +1240,7 @@
 			// 
 			this.chk_product_replenishmentorders.AutoSize = true;
 			this.chk_product_replenishmentorders.Location = new System.Drawing.Point(233, 336);
-			this.chk_product_replenishmentorders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chk_product_replenishmentorders.Margin = new System.Windows.Forms.Padding(4);
 			this.chk_product_replenishmentorders.Name = "chk_product_replenishmentorders";
 			this.chk_product_replenishmentorders.Size = new System.Drawing.Size(18, 17);
 			this.chk_product_replenishmentorders.TabIndex = 73;
@@ -1260,7 +1260,7 @@
 			// 
 			this.chk_product_standardorders.AutoSize = true;
 			this.chk_product_standardorders.Location = new System.Drawing.Point(233, 308);
-			this.chk_product_standardorders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chk_product_standardorders.Margin = new System.Windows.Forms.Padding(4);
 			this.chk_product_standardorders.Name = "chk_product_standardorders";
 			this.chk_product_standardorders.Size = new System.Drawing.Size(18, 17);
 			this.chk_product_standardorders.TabIndex = 71;
@@ -1299,7 +1299,7 @@
 			// txt_product_description
 			// 
 			this.txt_product_description.Location = new System.Drawing.Point(231, 242);
-			this.txt_product_description.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_product_description.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_description.Name = "txt_product_description";
 			this.txt_product_description.Size = new System.Drawing.Size(389, 22);
 			this.txt_product_description.TabIndex = 65;
@@ -1317,7 +1317,7 @@
 			// txt_product_unitofmeasure
 			// 
 			this.txt_product_unitofmeasure.Location = new System.Drawing.Point(231, 210);
-			this.txt_product_unitofmeasure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_product_unitofmeasure.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_unitofmeasure.Name = "txt_product_unitofmeasure";
 			this.txt_product_unitofmeasure.Size = new System.Drawing.Size(389, 22);
 			this.txt_product_unitofmeasure.TabIndex = 63;
@@ -1335,7 +1335,7 @@
 			// txt_product_unspsc
 			// 
 			this.txt_product_unspsc.Location = new System.Drawing.Point(231, 178);
-			this.txt_product_unspsc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_product_unspsc.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_unspsc.Name = "txt_product_unspsc";
 			this.txt_product_unspsc.Size = new System.Drawing.Size(389, 22);
 			this.txt_product_unspsc.TabIndex = 61;
@@ -1353,7 +1353,7 @@
 			// txt_product_name
 			// 
 			this.txt_product_name.Location = new System.Drawing.Point(231, 146);
-			this.txt_product_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_product_name.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_name.Name = "txt_product_name";
 			this.txt_product_name.Size = new System.Drawing.Size(389, 22);
 			this.txt_product_name.TabIndex = 59;
@@ -1371,7 +1371,7 @@
 			// txt_product_productid
 			// 
 			this.txt_product_productid.Location = new System.Drawing.Point(231, 114);
-			this.txt_product_productid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_product_productid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_productid.Name = "txt_product_productid";
 			this.txt_product_productid.Size = new System.Drawing.Size(389, 22);
 			this.txt_product_productid.TabIndex = 57;
@@ -1389,7 +1389,7 @@
 			// txt_product_newinteropid
 			// 
 			this.txt_product_newinteropid.Location = new System.Drawing.Point(231, 82);
-			this.txt_product_newinteropid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_product_newinteropid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_newinteropid.Name = "txt_product_newinteropid";
 			this.txt_product_newinteropid.Size = new System.Drawing.Size(389, 22);
 			this.txt_product_newinteropid.TabIndex = 55;
@@ -1407,7 +1407,7 @@
 			// txt_product_companyinteropid
 			// 
 			this.txt_product_companyinteropid.Location = new System.Drawing.Point(231, 50);
-			this.txt_product_companyinteropid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_product_companyinteropid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_companyinteropid.Name = "txt_product_companyinteropid";
 			this.txt_product_companyinteropid.Size = new System.Drawing.Size(389, 22);
 			this.txt_product_companyinteropid.TabIndex = 53;
@@ -1426,7 +1426,7 @@
 			// txt_product_interopid
 			// 
 			this.txt_product_interopid.Location = new System.Drawing.Point(231, 18);
-			this.txt_product_interopid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_product_interopid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_product_interopid.Name = "txt_product_interopid";
 			this.txt_product_interopid.Size = new System.Drawing.Size(389, 22);
 			this.txt_product_interopid.TabIndex = 51;
@@ -1436,7 +1436,7 @@
 			// 
 			this.btn_product_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_product_random.Location = new System.Drawing.Point(16, 656);
-			this.btn_product_random.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_product_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_product_random.Name = "btn_product_random";
 			this.btn_product_random.Size = new System.Drawing.Size(100, 28);
 			this.btn_product_random.TabIndex = 50;
@@ -1448,7 +1448,7 @@
 			// 
 			this.btn_product_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_product_delete.Location = new System.Drawing.Point(1713, 656);
-			this.btn_product_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_product_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_product_delete.Name = "btn_product_delete";
 			this.btn_product_delete.Size = new System.Drawing.Size(100, 28);
 			this.btn_product_delete.TabIndex = 49;
@@ -1460,7 +1460,7 @@
 			// 
 			this.btn_product_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_product_save.Location = new System.Drawing.Point(1833, 656);
-			this.btn_product_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_product_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_product_save.Name = "btn_product_save";
 			this.btn_product_save.Size = new System.Drawing.Size(100, 28);
 			this.btn_product_save.TabIndex = 48;
@@ -1502,7 +1502,7 @@
 			this.tab_user.Controls.Add(this.label26);
 			this.tab_user.Controls.Add(this.txt_user_interopid);
 			this.tab_user.Location = new System.Drawing.Point(4, 25);
-			this.tab_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_user.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_user.Name = "tab_user";
 			this.tab_user.Size = new System.Drawing.Size(1949, 702);
 			this.tab_user.TabIndex = 3;
@@ -1528,7 +1528,7 @@
             this.dataGridViewTextBoxColumn8,
             this.grid_user_orderfields_options});
 			this.grid_user_orderfields.Location = new System.Drawing.Point(305, 501);
-			this.grid_user_orderfields.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.grid_user_orderfields.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_user_orderfields.Name = "grid_user_orderfields";
 			this.grid_user_orderfields.Size = new System.Drawing.Size(351, 116);
 			this.grid_user_orderfields.TabIndex = 131;
@@ -1564,7 +1564,7 @@
             this.dataGridViewTextBoxColumn7,
             this.grid_user_group_add});
 			this.grid_user_groups.Location = new System.Drawing.Point(416, 350);
-			this.grid_user_groups.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.grid_user_groups.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_user_groups.Name = "grid_user_groups";
 			this.grid_user_groups.Size = new System.Drawing.Size(240, 116);
 			this.grid_user_groups.TabIndex = 129;
@@ -1599,7 +1599,7 @@
 			this.grid_user_costcenters.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6});
 			this.grid_user_costcenters.Location = new System.Drawing.Point(16, 501);
-			this.grid_user_costcenters.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.grid_user_costcenters.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_user_costcenters.Name = "grid_user_costcenters";
 			this.grid_user_costcenters.Size = new System.Drawing.Size(240, 116);
 			this.grid_user_costcenters.TabIndex = 127;
@@ -1630,7 +1630,7 @@
             this.dataGridViewCheckBoxColumn1,
             this.dataGridViewCheckBoxColumn2});
 			this.grid_user_address.Location = new System.Drawing.Point(15, 350);
-			this.grid_user_address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.grid_user_address.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_user_address.Name = "grid_user_address";
 			this.grid_user_address.Size = new System.Drawing.Size(368, 116);
 			this.grid_user_address.TabIndex = 125;
@@ -1666,7 +1666,7 @@
 			// txt_user_email
 			// 
 			this.txt_user_email.Location = new System.Drawing.Point(181, 202);
-			this.txt_user_email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_user_email.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_user_email.Name = "txt_user_email";
 			this.txt_user_email.Size = new System.Drawing.Size(389, 22);
 			this.txt_user_email.TabIndex = 62;
@@ -1685,7 +1685,7 @@
 			// 
 			this.chk_user_terms.AutoSize = true;
 			this.chk_user_terms.Location = new System.Drawing.Point(181, 299);
-			this.chk_user_terms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chk_user_terms.Margin = new System.Windows.Forms.Padding(4);
 			this.chk_user_terms.Name = "chk_user_terms";
 			this.chk_user_terms.Size = new System.Drawing.Size(18, 17);
 			this.chk_user_terms.TabIndex = 60;
@@ -1704,7 +1704,7 @@
 			// txt_user_phonenumber
 			// 
 			this.txt_user_phonenumber.Location = new System.Drawing.Point(181, 266);
-			this.txt_user_phonenumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_user_phonenumber.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_user_phonenumber.Name = "txt_user_phonenumber";
 			this.txt_user_phonenumber.Size = new System.Drawing.Size(389, 22);
 			this.txt_user_phonenumber.TabIndex = 58;
@@ -1722,7 +1722,7 @@
 			// txt_user_password
 			// 
 			this.txt_user_password.Location = new System.Drawing.Point(181, 234);
-			this.txt_user_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_user_password.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_user_password.Name = "txt_user_password";
 			this.txt_user_password.Size = new System.Drawing.Size(389, 22);
 			this.txt_user_password.TabIndex = 56;
@@ -1740,7 +1740,7 @@
 			// txt_user_lastname
 			// 
 			this.txt_user_lastname.Location = new System.Drawing.Point(181, 170);
-			this.txt_user_lastname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_user_lastname.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_user_lastname.Name = "txt_user_lastname";
 			this.txt_user_lastname.Size = new System.Drawing.Size(389, 22);
 			this.txt_user_lastname.TabIndex = 54;
@@ -1758,7 +1758,7 @@
 			// txt_user_firstname
 			// 
 			this.txt_user_firstname.Location = new System.Drawing.Point(181, 138);
-			this.txt_user_firstname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_user_firstname.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_user_firstname.Name = "txt_user_firstname";
 			this.txt_user_firstname.Size = new System.Drawing.Size(389, 22);
 			this.txt_user_firstname.TabIndex = 52;
@@ -1776,7 +1776,7 @@
 			// txt_user_username
 			// 
 			this.txt_user_username.Location = new System.Drawing.Point(181, 106);
-			this.txt_user_username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_user_username.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_user_username.Name = "txt_user_username";
 			this.txt_user_username.Size = new System.Drawing.Size(389, 22);
 			this.txt_user_username.TabIndex = 50;
@@ -1795,7 +1795,7 @@
 			// 
 			this.chk_user_active.AutoSize = true;
 			this.chk_user_active.Location = new System.Drawing.Point(181, 81);
-			this.chk_user_active.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chk_user_active.Margin = new System.Windows.Forms.Padding(4);
 			this.chk_user_active.Name = "chk_user_active";
 			this.chk_user_active.Size = new System.Drawing.Size(18, 17);
 			this.chk_user_active.TabIndex = 48;
@@ -1805,7 +1805,7 @@
 			// 
 			this.btn_user_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_user_random.Location = new System.Drawing.Point(12, 624);
-			this.btn_user_random.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_user_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_user_random.Name = "btn_user_random";
 			this.btn_user_random.Size = new System.Drawing.Size(100, 28);
 			this.btn_user_random.TabIndex = 47;
@@ -1817,7 +1817,7 @@
 			// 
 			this.btn_user_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_user_delete.Location = new System.Drawing.Point(436, 624);
-			this.btn_user_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_user_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_user_delete.Name = "btn_user_delete";
 			this.btn_user_delete.Size = new System.Drawing.Size(100, 28);
 			this.btn_user_delete.TabIndex = 46;
@@ -1829,7 +1829,7 @@
 			// 
 			this.btn_user_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_user_save.Location = new System.Drawing.Point(556, 624);
-			this.btn_user_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_user_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_user_save.Name = "btn_user_save";
 			this.btn_user_save.Size = new System.Drawing.Size(100, 28);
 			this.btn_user_save.TabIndex = 45;
@@ -1850,7 +1850,7 @@
 			// txt_user_companyinteropid
 			// 
 			this.txt_user_companyinteropid.Location = new System.Drawing.Point(181, 47);
-			this.txt_user_companyinteropid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_user_companyinteropid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_user_companyinteropid.Name = "txt_user_companyinteropid";
 			this.txt_user_companyinteropid.Size = new System.Drawing.Size(389, 22);
 			this.txt_user_companyinteropid.TabIndex = 43;
@@ -1869,7 +1869,7 @@
 			// txt_user_interopid
 			// 
 			this.txt_user_interopid.Location = new System.Drawing.Point(181, 15);
-			this.txt_user_interopid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_user_interopid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_user_interopid.Name = "txt_user_interopid";
 			this.txt_user_interopid.Size = new System.Drawing.Size(389, 22);
 			this.txt_user_interopid.TabIndex = 41;
@@ -1888,7 +1888,7 @@
 			this.tab_costcenter.Controls.Add(this.btn_costcenter_delete);
 			this.tab_costcenter.Controls.Add(this.btn_costcenter_save);
 			this.tab_costcenter.Location = new System.Drawing.Point(4, 25);
-			this.tab_costcenter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_costcenter.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_costcenter.Name = "tab_costcenter";
 			this.tab_costcenter.Size = new System.Drawing.Size(1949, 702);
 			this.tab_costcenter.TabIndex = 1;
@@ -1918,7 +1918,7 @@
 			// txt_costcenter_description
 			// 
 			this.txt_costcenter_description.Location = new System.Drawing.Point(196, 123);
-			this.txt_costcenter_description.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_costcenter_description.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_costcenter_description.Name = "txt_costcenter_description";
 			this.txt_costcenter_description.Size = new System.Drawing.Size(389, 22);
 			this.txt_costcenter_description.TabIndex = 38;
@@ -1926,7 +1926,7 @@
 			// txt_costcenter_name
 			// 
 			this.txt_costcenter_name.Location = new System.Drawing.Point(196, 91);
-			this.txt_costcenter_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_costcenter_name.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_costcenter_name.Name = "txt_costcenter_name";
 			this.txt_costcenter_name.Size = new System.Drawing.Size(389, 22);
 			this.txt_costcenter_name.TabIndex = 37;
@@ -1944,7 +1944,7 @@
 			// txt_costcenter_companyinteropid
 			// 
 			this.txt_costcenter_companyinteropid.Location = new System.Drawing.Point(196, 59);
-			this.txt_costcenter_companyinteropid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_costcenter_companyinteropid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_costcenter_companyinteropid.Name = "txt_costcenter_companyinteropid";
 			this.txt_costcenter_companyinteropid.Size = new System.Drawing.Size(389, 22);
 			this.txt_costcenter_companyinteropid.TabIndex = 35;
@@ -1963,7 +1963,7 @@
 			// txt_costcenter_interopid
 			// 
 			this.txt_costcenter_interopid.Location = new System.Drawing.Point(196, 27);
-			this.txt_costcenter_interopid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_costcenter_interopid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_costcenter_interopid.Name = "txt_costcenter_interopid";
 			this.txt_costcenter_interopid.Size = new System.Drawing.Size(389, 22);
 			this.txt_costcenter_interopid.TabIndex = 33;
@@ -1972,7 +1972,7 @@
 			// 
 			this.btn_costcenter_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_costcenter_random.Location = new System.Drawing.Point(27, 167);
-			this.btn_costcenter_random.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_costcenter_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_costcenter_random.Name = "btn_costcenter_random";
 			this.btn_costcenter_random.Size = new System.Drawing.Size(100, 28);
 			this.btn_costcenter_random.TabIndex = 32;
@@ -1984,7 +1984,7 @@
 			// 
 			this.btn_costcenter_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_costcenter_delete.Location = new System.Drawing.Point(367, 167);
-			this.btn_costcenter_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_costcenter_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_costcenter_delete.Name = "btn_costcenter_delete";
 			this.btn_costcenter_delete.Size = new System.Drawing.Size(100, 28);
 			this.btn_costcenter_delete.TabIndex = 31;
@@ -1996,7 +1996,7 @@
 			// 
 			this.btn_costcenter_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_costcenter_save.Location = new System.Drawing.Point(487, 167);
-			this.btn_costcenter_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_costcenter_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_costcenter_save.Name = "btn_costcenter_save";
 			this.btn_costcenter_save.Size = new System.Drawing.Size(100, 28);
 			this.btn_costcenter_save.TabIndex = 30;
@@ -2022,7 +2022,7 @@
 			this.tab_group.Controls.Add(this.btn_group_delete);
 			this.tab_group.Controls.Add(this.btn_group_save);
 			this.tab_group.Location = new System.Drawing.Point(4, 25);
-			this.tab_group.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_group.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_group.Name = "tab_group";
 			this.tab_group.Size = new System.Drawing.Size(1949, 702);
 			this.tab_group.TabIndex = 2;
@@ -2049,7 +2049,7 @@
             this.UseForShipping,
             this.UseForBilling});
 			this.grid_group_address.Location = new System.Drawing.Point(25, 197);
-			this.grid_group_address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.grid_group_address.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_group_address.Name = "grid_group_address";
 			this.grid_group_address.Size = new System.Drawing.Size(391, 116);
 			this.grid_group_address.TabIndex = 123;
@@ -2086,7 +2086,7 @@
 			// 
 			this.chk_group_isreportinggroup.AutoSize = true;
 			this.chk_group_isreportinggroup.Location = new System.Drawing.Point(195, 146);
-			this.chk_group_isreportinggroup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chk_group_isreportinggroup.Margin = new System.Windows.Forms.Padding(4);
 			this.chk_group_isreportinggroup.Name = "chk_group_isreportinggroup";
 			this.chk_group_isreportinggroup.Size = new System.Drawing.Size(18, 17);
 			this.chk_group_isreportinggroup.TabIndex = 45;
@@ -2115,7 +2115,7 @@
 			// txt_group_description
 			// 
 			this.txt_group_description.Location = new System.Drawing.Point(195, 113);
-			this.txt_group_description.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_group_description.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_group_description.Name = "txt_group_description";
 			this.txt_group_description.Size = new System.Drawing.Size(389, 22);
 			this.txt_group_description.TabIndex = 42;
@@ -2123,7 +2123,7 @@
 			// txt_group_name
 			// 
 			this.txt_group_name.Location = new System.Drawing.Point(195, 81);
-			this.txt_group_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_group_name.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_group_name.Name = "txt_group_name";
 			this.txt_group_name.Size = new System.Drawing.Size(389, 22);
 			this.txt_group_name.TabIndex = 41;
@@ -2141,7 +2141,7 @@
 			// txt_group_companyinteropid
 			// 
 			this.txt_group_companyinteropid.Location = new System.Drawing.Point(195, 49);
-			this.txt_group_companyinteropid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_group_companyinteropid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_group_companyinteropid.Name = "txt_group_companyinteropid";
 			this.txt_group_companyinteropid.Size = new System.Drawing.Size(389, 22);
 			this.txt_group_companyinteropid.TabIndex = 39;
@@ -2160,7 +2160,7 @@
 			// txt_group_interopid
 			// 
 			this.txt_group_interopid.Location = new System.Drawing.Point(195, 17);
-			this.txt_group_interopid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_group_interopid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_group_interopid.Name = "txt_group_interopid";
 			this.txt_group_interopid.Size = new System.Drawing.Size(389, 22);
 			this.txt_group_interopid.TabIndex = 37;
@@ -2169,7 +2169,7 @@
 			// 
 			this.btn_group_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_group_random.Location = new System.Drawing.Point(25, 331);
-			this.btn_group_random.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_group_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_group_random.Name = "btn_group_random";
 			this.btn_group_random.Size = new System.Drawing.Size(100, 28);
 			this.btn_group_random.TabIndex = 32;
@@ -2181,7 +2181,7 @@
 			// 
 			this.btn_group_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_group_delete.Location = new System.Drawing.Point(365, 331);
-			this.btn_group_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_group_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_group_delete.Name = "btn_group_delete";
 			this.btn_group_delete.Size = new System.Drawing.Size(100, 28);
 			this.btn_group_delete.TabIndex = 31;
@@ -2193,7 +2193,7 @@
 			// 
 			this.btn_group_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_group_save.Location = new System.Drawing.Point(485, 331);
-			this.btn_group_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_group_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_group_save.Name = "btn_group_save";
 			this.btn_group_save.Size = new System.Drawing.Size(100, 28);
 			this.btn_group_save.TabIndex = 30;
@@ -2228,9 +2228,9 @@
 			this.tab_spendingaccount.Controls.Add(this.label59);
 			this.tab_spendingaccount.Controls.Add(this.txt_spendingaccount_interopid);
 			this.tab_spendingaccount.Location = new System.Drawing.Point(4, 25);
-			this.tab_spendingaccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_spendingaccount.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_spendingaccount.Name = "tab_spendingaccount";
-			this.tab_spendingaccount.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_spendingaccount.Padding = new System.Windows.Forms.Padding(4);
 			this.tab_spendingaccount.Size = new System.Drawing.Size(1949, 702);
 			this.tab_spendingaccount.TabIndex = 5;
 			this.tab_spendingaccount.Text = "Spending Account";
@@ -2240,7 +2240,7 @@
 			// 
 			this.btn_spendingaccount_update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_spendingaccount_update.Location = new System.Drawing.Point(503, 242);
-			this.btn_spendingaccount_update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_spendingaccount_update.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_spendingaccount_update.Name = "btn_spendingaccount_update";
 			this.btn_spendingaccount_update.Size = new System.Drawing.Size(116, 25);
 			this.btn_spendingaccount_update.TabIndex = 63;
@@ -2252,7 +2252,7 @@
 			// 
 			this.btn_spendingaccount_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_spendingaccount_random.Location = new System.Drawing.Point(15, 363);
-			this.btn_spendingaccount_random.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_spendingaccount_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_spendingaccount_random.Name = "btn_spendingaccount_random";
 			this.btn_spendingaccount_random.Size = new System.Drawing.Size(100, 28);
 			this.btn_spendingaccount_random.TabIndex = 62;
@@ -2264,7 +2264,7 @@
 			// 
 			this.btn_spendingaccount_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_spendingaccount_delete.Location = new System.Drawing.Point(401, 363);
-			this.btn_spendingaccount_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_spendingaccount_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_spendingaccount_delete.Name = "btn_spendingaccount_delete";
 			this.btn_spendingaccount_delete.Size = new System.Drawing.Size(100, 28);
 			this.btn_spendingaccount_delete.TabIndex = 61;
@@ -2276,7 +2276,7 @@
 			// 
 			this.btn_spendingaccount_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_spendingaccount_save.Location = new System.Drawing.Point(521, 363);
-			this.btn_spendingaccount_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_spendingaccount_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_spendingaccount_save.Name = "btn_spendingaccount_save";
 			this.btn_spendingaccount_save.Size = new System.Drawing.Size(100, 28);
 			this.btn_spendingaccount_save.TabIndex = 60;
@@ -2287,7 +2287,7 @@
 			// date_spendingaccount_expiration
 			// 
 			this.date_spendingaccount_expiration.Location = new System.Drawing.Point(228, 306);
-			this.date_spendingaccount_expiration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.date_spendingaccount_expiration.Margin = new System.Windows.Forms.Padding(4);
 			this.date_spendingaccount_expiration.Name = "date_spendingaccount_expiration";
 			this.date_spendingaccount_expiration.Size = new System.Drawing.Size(265, 22);
 			this.date_spendingaccount_expiration.TabIndex = 59;
@@ -2305,7 +2305,7 @@
 			// date_spendingaccount_start
 			// 
 			this.date_spendingaccount_start.Location = new System.Drawing.Point(228, 274);
-			this.date_spendingaccount_start.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.date_spendingaccount_start.Margin = new System.Windows.Forms.Padding(4);
 			this.date_spendingaccount_start.Name = "date_spendingaccount_start";
 			this.date_spendingaccount_start.Size = new System.Drawing.Size(265, 22);
 			this.date_spendingaccount_start.TabIndex = 57;
@@ -2333,7 +2333,7 @@
 			// txt_spendingaccount_balance
 			// 
 			this.txt_spendingaccount_balance.Location = new System.Drawing.Point(228, 242);
-			this.txt_spendingaccount_balance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_spendingaccount_balance.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_spendingaccount_balance.Name = "txt_spendingaccount_balance";
 			this.txt_spendingaccount_balance.Size = new System.Drawing.Size(265, 22);
 			this.txt_spendingaccount_balance.TabIndex = 53;
@@ -2351,7 +2351,7 @@
 			// txt_spendingaccount_userid
 			// 
 			this.txt_spendingaccount_userid.Location = new System.Drawing.Point(228, 210);
-			this.txt_spendingaccount_userid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_spendingaccount_userid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_spendingaccount_userid.Name = "txt_spendingaccount_userid";
 			this.txt_spendingaccount_userid.Size = new System.Drawing.Size(389, 22);
 			this.txt_spendingaccount_userid.TabIndex = 51;
@@ -2369,7 +2369,7 @@
 			// txt_spendingaccount_groupid
 			// 
 			this.txt_spendingaccount_groupid.Location = new System.Drawing.Point(228, 178);
-			this.txt_spendingaccount_groupid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_spendingaccount_groupid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_spendingaccount_groupid.Name = "txt_spendingaccount_groupid";
 			this.txt_spendingaccount_groupid.Size = new System.Drawing.Size(389, 22);
 			this.txt_spendingaccount_groupid.TabIndex = 49;
@@ -2387,7 +2387,7 @@
 			// txt_spendingaccount_companyid
 			// 
 			this.txt_spendingaccount_companyid.Location = new System.Drawing.Point(228, 146);
-			this.txt_spendingaccount_companyid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_spendingaccount_companyid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_spendingaccount_companyid.Name = "txt_spendingaccount_companyid";
 			this.txt_spendingaccount_companyid.Size = new System.Drawing.Size(389, 22);
 			this.txt_spendingaccount_companyid.TabIndex = 47;
@@ -2405,7 +2405,7 @@
 			// txt_spendingaccount_type
 			// 
 			this.txt_spendingaccount_type.Location = new System.Drawing.Point(228, 114);
-			this.txt_spendingaccount_type.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_spendingaccount_type.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_spendingaccount_type.Name = "txt_spendingaccount_type";
 			this.txt_spendingaccount_type.Size = new System.Drawing.Size(389, 22);
 			this.txt_spendingaccount_type.TabIndex = 45;
@@ -2423,7 +2423,7 @@
 			// txt_spendingaccount_label
 			// 
 			this.txt_spendingaccount_label.Location = new System.Drawing.Point(228, 82);
-			this.txt_spendingaccount_label.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_spendingaccount_label.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_spendingaccount_label.Name = "txt_spendingaccount_label";
 			this.txt_spendingaccount_label.Size = new System.Drawing.Size(389, 22);
 			this.txt_spendingaccount_label.TabIndex = 43;
@@ -2441,7 +2441,7 @@
 			// txt_spendingaccount_name
 			// 
 			this.txt_spendingaccount_name.Location = new System.Drawing.Point(228, 50);
-			this.txt_spendingaccount_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_spendingaccount_name.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_spendingaccount_name.Name = "txt_spendingaccount_name";
 			this.txt_spendingaccount_name.Size = new System.Drawing.Size(389, 22);
 			this.txt_spendingaccount_name.TabIndex = 41;
@@ -2459,7 +2459,7 @@
 			// txt_spendingaccount_interopid
 			// 
 			this.txt_spendingaccount_interopid.Location = new System.Drawing.Point(228, 18);
-			this.txt_spendingaccount_interopid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_spendingaccount_interopid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_spendingaccount_interopid.Name = "txt_spendingaccount_interopid";
 			this.txt_spendingaccount_interopid.Size = new System.Drawing.Size(389, 22);
 			this.txt_spendingaccount_interopid.TabIndex = 39;
@@ -2490,9 +2490,9 @@
 			this.tab_orderfields.Controls.Add(this.label70);
 			this.tab_orderfields.Controls.Add(this.txt_orderfields_name);
 			this.tab_orderfields.Location = new System.Drawing.Point(4, 25);
-			this.tab_orderfields.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_orderfields.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_orderfields.Name = "tab_orderfields";
-			this.tab_orderfields.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_orderfields.Padding = new System.Windows.Forms.Padding(4);
 			this.tab_orderfields.Size = new System.Drawing.Size(1949, 702);
 			this.tab_orderfields.TabIndex = 6;
 			this.tab_orderfields.Text = "Order Fields";
@@ -2511,7 +2511,7 @@
 			// txt_orderfields_maxlength
 			// 
 			this.txt_orderfields_maxlength.Location = new System.Drawing.Point(229, 402);
-			this.txt_orderfields_maxlength.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_orderfields_maxlength.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_orderfields_maxlength.Name = "txt_orderfields_maxlength";
 			this.txt_orderfields_maxlength.Size = new System.Drawing.Size(389, 22);
 			this.txt_orderfields_maxlength.TabIndex = 131;
@@ -2520,7 +2520,7 @@
 			// 
 			this.btn_orderfields_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_orderfields_random.Location = new System.Drawing.Point(27, 454);
-			this.btn_orderfields_random.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_orderfields_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_orderfields_random.Name = "btn_orderfields_random";
 			this.btn_orderfields_random.Size = new System.Drawing.Size(100, 28);
 			this.btn_orderfields_random.TabIndex = 130;
@@ -2532,7 +2532,7 @@
 			// 
 			this.btn_orderfields_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_orderfields_delete.Location = new System.Drawing.Point(400, 454);
-			this.btn_orderfields_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_orderfields_delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_orderfields_delete.Name = "btn_orderfields_delete";
 			this.btn_orderfields_delete.Size = new System.Drawing.Size(100, 28);
 			this.btn_orderfields_delete.TabIndex = 129;
@@ -2544,7 +2544,7 @@
 			// 
 			this.btn_orderfields_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_orderfields_save.Location = new System.Drawing.Point(520, 454);
-			this.btn_orderfields_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_orderfields_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_orderfields_save.Name = "btn_orderfields_save";
 			this.btn_orderfields_save.Size = new System.Drawing.Size(100, 28);
 			this.btn_orderfields_save.TabIndex = 128;
@@ -2565,7 +2565,7 @@
 			// txt_orderfields_width
 			// 
 			this.txt_orderfields_width.Location = new System.Drawing.Point(229, 370);
-			this.txt_orderfields_width.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_orderfields_width.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_orderfields_width.Name = "txt_orderfields_width";
 			this.txt_orderfields_width.Size = new System.Drawing.Size(389, 22);
 			this.txt_orderfields_width.TabIndex = 126;
@@ -2583,7 +2583,7 @@
 			// txt_orderfields_lines
 			// 
 			this.txt_orderfields_lines.Location = new System.Drawing.Point(229, 338);
-			this.txt_orderfields_lines.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_orderfields_lines.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_orderfields_lines.Name = "txt_orderfields_lines";
 			this.txt_orderfields_lines.Size = new System.Drawing.Size(389, 22);
 			this.txt_orderfields_lines.TabIndex = 124;
@@ -2608,7 +2608,7 @@
             this.dataGridViewTextBoxColumn2,
             this.Delete});
 			this.grid_orderfields_options.Location = new System.Drawing.Point(229, 215);
-			this.grid_orderfields_options.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.grid_orderfields_options.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_orderfields_options.Name = "grid_orderfields_options";
 			this.grid_orderfields_options.Size = new System.Drawing.Size(391, 116);
 			this.grid_orderfields_options.TabIndex = 122;
@@ -2636,7 +2636,7 @@
 			// 
 			this.chk_orderfields_explicit.AutoSize = true;
 			this.chk_orderfields_explicit.Location = new System.Drawing.Point(229, 182);
-			this.chk_orderfields_explicit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chk_orderfields_explicit.Margin = new System.Windows.Forms.Padding(4);
 			this.chk_orderfields_explicit.Name = "chk_orderfields_explicit";
 			this.chk_orderfields_explicit.Size = new System.Drawing.Size(18, 17);
 			this.chk_orderfields_explicit.TabIndex = 92;
@@ -2656,7 +2656,7 @@
 			// 
 			this.chk_orderfields_required.AutoSize = true;
 			this.chk_orderfields_required.Location = new System.Drawing.Point(229, 119);
-			this.chk_orderfields_required.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chk_orderfields_required.Margin = new System.Windows.Forms.Padding(4);
 			this.chk_orderfields_required.Name = "chk_orderfields_required";
 			this.chk_orderfields_required.Size = new System.Drawing.Size(18, 17);
 			this.chk_orderfields_required.TabIndex = 90;
@@ -2680,7 +2680,7 @@
             "Drop Down",
             "Radio Button List"});
 			this.ddl_orderfields_type.Location = new System.Drawing.Point(229, 84);
-			this.ddl_orderfields_type.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ddl_orderfields_type.Margin = new System.Windows.Forms.Padding(4);
 			this.ddl_orderfields_type.Name = "ddl_orderfields_type";
 			this.ddl_orderfields_type.Size = new System.Drawing.Size(389, 24);
 			this.ddl_orderfields_type.TabIndex = 88;
@@ -2708,7 +2708,7 @@
 			// txt_orderfields_default
 			// 
 			this.txt_orderfields_default.Location = new System.Drawing.Point(229, 144);
-			this.txt_orderfields_default.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_orderfields_default.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_orderfields_default.Name = "txt_orderfields_default";
 			this.txt_orderfields_default.Size = new System.Drawing.Size(389, 22);
 			this.txt_orderfields_default.TabIndex = 45;
@@ -2726,7 +2726,7 @@
 			// txt_orderfields_label
 			// 
 			this.txt_orderfields_label.Location = new System.Drawing.Point(229, 52);
-			this.txt_orderfields_label.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_orderfields_label.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_orderfields_label.Name = "txt_orderfields_label";
 			this.txt_orderfields_label.Size = new System.Drawing.Size(389, 22);
 			this.txt_orderfields_label.TabIndex = 43;
@@ -2744,7 +2744,7 @@
 			// txt_orderfields_name
 			// 
 			this.txt_orderfields_name.Location = new System.Drawing.Point(229, 20);
-			this.txt_orderfields_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_orderfields_name.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_orderfields_name.Name = "txt_orderfields_name";
 			this.txt_orderfields_name.Size = new System.Drawing.Size(389, 22);
 			this.txt_orderfields_name.TabIndex = 41;
@@ -2755,9 +2755,9 @@
 			this.tab_orderrequest.Controls.Add(this.btn_orderrequest_get);
 			this.tab_orderrequest.Controls.Add(this.grid_orders);
 			this.tab_orderrequest.Location = new System.Drawing.Point(4, 25);
-			this.tab_orderrequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_orderrequest.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_orderrequest.Name = "tab_orderrequest";
-			this.tab_orderrequest.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_orderrequest.Padding = new System.Windows.Forms.Padding(4);
 			this.tab_orderrequest.Size = new System.Drawing.Size(1949, 702);
 			this.tab_orderrequest.TabIndex = 7;
 			this.tab_orderrequest.Text = "Order Request";
@@ -2766,7 +2766,7 @@
 			// txt_orders_result
 			// 
 			this.txt_orders_result.Location = new System.Drawing.Point(15, 204);
-			this.txt_orders_result.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_orders_result.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_orders_result.Multiline = true;
 			this.txt_orders_result.Name = "txt_orders_result";
 			this.txt_orders_result.Size = new System.Drawing.Size(1253, 474);
@@ -2776,7 +2776,7 @@
 			// 
 			this.btn_orderrequest_get.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_orderrequest_get.Location = new System.Drawing.Point(1169, 166);
-			this.btn_orderrequest_get.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_orderrequest_get.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_orderrequest_get.Name = "btn_orderrequest_get";
 			this.btn_orderrequest_get.Size = new System.Drawing.Size(100, 28);
 			this.btn_orderrequest_get.TabIndex = 129;
@@ -2795,7 +2795,7 @@
             this.Url,
             this.dataGridViewButtonColumn1});
 			this.grid_orders.Location = new System.Drawing.Point(8, 7);
-			this.grid_orders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.grid_orders.Margin = new System.Windows.Forms.Padding(4);
 			this.grid_orders.Name = "grid_orders";
 			this.grid_orders.Size = new System.Drawing.Size(1261, 151);
 			this.grid_orders.TabIndex = 123;
@@ -2827,15 +2827,48 @@
 			this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
 			this.dataGridViewButtonColumn1.Text = "Download";
 			// 
+			// tab_orderxml
+			// 
+			this.tab_orderxml.Controls.Add(this.txt_orderxml);
+			this.tab_orderxml.Controls.Add(this.btn_openxml);
+			this.tab_orderxml.Location = new System.Drawing.Point(4, 25);
+			this.tab_orderxml.Name = "tab_orderxml";
+			this.tab_orderxml.Size = new System.Drawing.Size(1949, 702);
+			this.tab_orderxml.TabIndex = 10;
+			this.tab_orderxml.Text = "Order XML";
+			this.tab_orderxml.UseVisualStyleBackColor = true;
+			// 
+			// txt_orderxml
+			// 
+			this.txt_orderxml.Location = new System.Drawing.Point(9, 60);
+			this.txt_orderxml.Margin = new System.Windows.Forms.Padding(4);
+			this.txt_orderxml.Multiline = true;
+			this.txt_orderxml.Name = "txt_orderxml";
+			this.txt_orderxml.ReadOnly = true;
+			this.txt_orderxml.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.txt_orderxml.Size = new System.Drawing.Size(1253, 474);
+			this.txt_orderxml.TabIndex = 131;
+			// 
+			// btn_openxml
+			// 
+			this.btn_openxml.Location = new System.Drawing.Point(9, 13);
+			this.btn_openxml.Margin = new System.Windows.Forms.Padding(4);
+			this.btn_openxml.Name = "btn_openxml";
+			this.btn_openxml.Size = new System.Drawing.Size(100, 28);
+			this.btn_openxml.TabIndex = 31;
+			this.btn_openxml.Text = "Open Order XML File";
+			this.btn_openxml.UseVisualStyleBackColor = true;
+			this.btn_openxml.Click += new System.EventHandler(this.btn_openxml_Click);
+			// 
 			// tab_pricescheduleassignments
 			// 
 			this.tab_pricescheduleassignments.Controls.Add(this.button1);
 			this.tab_pricescheduleassignments.Controls.Add(this.label81);
 			this.tab_pricescheduleassignments.Controls.Add(this.dataGridView1);
 			this.tab_pricescheduleassignments.Location = new System.Drawing.Point(4, 25);
-			this.tab_pricescheduleassignments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_pricescheduleassignments.Margin = new System.Windows.Forms.Padding(4);
 			this.tab_pricescheduleassignments.Name = "tab_pricescheduleassignments";
-			this.tab_pricescheduleassignments.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tab_pricescheduleassignments.Padding = new System.Windows.Forms.Padding(4);
 			this.tab_pricescheduleassignments.Size = new System.Drawing.Size(1949, 702);
 			this.tab_pricescheduleassignments.TabIndex = 8;
 			this.tab_pricescheduleassignments.Text = "Price Schedule Assignments";
@@ -2845,7 +2878,7 @@
 			// 
 			this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.button1.Location = new System.Drawing.Point(992, 448);
-			this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.button1.Margin = new System.Windows.Forms.Padding(4);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(100, 28);
 			this.button1.TabIndex = 130;
@@ -2874,7 +2907,7 @@
             this.Price_ReplenishmentOrderScheduleName,
             this.Price_PriceRequestOrderScheduleName});
 			this.dataGridView1.Location = new System.Drawing.Point(15, 30);
-			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.Size = new System.Drawing.Size(1077, 411);
 			this.dataGridView1.TabIndex = 128;
@@ -2948,9 +2981,9 @@
 			this.tabShipNotice.Controls.Add(this.label86);
 			this.tabShipNotice.Controls.Add(this.txt_ship_shipmentid);
 			this.tabShipNotice.Location = new System.Drawing.Point(4, 25);
-			this.tabShipNotice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tabShipNotice.Margin = new System.Windows.Forms.Padding(4);
 			this.tabShipNotice.Name = "tabShipNotice";
-			this.tabShipNotice.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tabShipNotice.Padding = new System.Windows.Forms.Padding(4);
 			this.tabShipNotice.Size = new System.Drawing.Size(1949, 702);
 			this.tabShipNotice.TabIndex = 9;
 			this.tabShipNotice.Text = "Ship Notice";
@@ -2960,7 +2993,7 @@
 			// 
 			this.btn_ship_random.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_ship_random.Location = new System.Drawing.Point(23, 523);
-			this.btn_ship_random.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_ship_random.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_ship_random.Name = "btn_ship_random";
 			this.btn_ship_random.Size = new System.Drawing.Size(100, 28);
 			this.btn_ship_random.TabIndex = 132;
@@ -2972,7 +3005,7 @@
 			// 
 			this.btn_ship_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_ship_save.Location = new System.Drawing.Point(516, 523);
-			this.btn_ship_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_ship_save.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_ship_save.Name = "btn_ship_save";
 			this.btn_ship_save.Size = new System.Drawing.Size(100, 28);
 			this.btn_ship_save.TabIndex = 131;
@@ -2992,7 +3025,7 @@
 			// txt_ship_lineitemid
 			// 
 			this.txt_ship_lineitemid.Location = new System.Drawing.Point(225, 470);
-			this.txt_ship_lineitemid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_ship_lineitemid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_ship_lineitemid.Name = "txt_ship_lineitemid";
 			this.txt_ship_lineitemid.Size = new System.Drawing.Size(389, 22);
 			this.txt_ship_lineitemid.TabIndex = 105;
@@ -3010,7 +3043,7 @@
 			// txt_ship_unitofmeasure
 			// 
 			this.txt_ship_unitofmeasure.Location = new System.Drawing.Point(225, 438);
-			this.txt_ship_unitofmeasure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_ship_unitofmeasure.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_ship_unitofmeasure.Name = "txt_ship_unitofmeasure";
 			this.txt_ship_unitofmeasure.Size = new System.Drawing.Size(389, 22);
 			this.txt_ship_unitofmeasure.TabIndex = 103;
@@ -3028,7 +3061,7 @@
 			// txt_ship_linenumber
 			// 
 			this.txt_ship_linenumber.Location = new System.Drawing.Point(225, 406);
-			this.txt_ship_linenumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_ship_linenumber.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_ship_linenumber.Name = "txt_ship_linenumber";
 			this.txt_ship_linenumber.Size = new System.Drawing.Size(389, 22);
 			this.txt_ship_linenumber.TabIndex = 101;
@@ -3046,7 +3079,7 @@
 			// txt_ship_quantity
 			// 
 			this.txt_ship_quantity.Location = new System.Drawing.Point(225, 374);
-			this.txt_ship_quantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_ship_quantity.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_ship_quantity.Name = "txt_ship_quantity";
 			this.txt_ship_quantity.Size = new System.Drawing.Size(389, 22);
 			this.txt_ship_quantity.TabIndex = 99;
@@ -3064,7 +3097,7 @@
 			// txt_ship_payloadid
 			// 
 			this.txt_ship_payloadid.Location = new System.Drawing.Point(225, 342);
-			this.txt_ship_payloadid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_ship_payloadid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_ship_payloadid.Name = "txt_ship_payloadid";
 			this.txt_ship_payloadid.Size = new System.Drawing.Size(389, 22);
 			this.txt_ship_payloadid.TabIndex = 97;
@@ -3082,7 +3115,7 @@
 			// txt_ship_orderid
 			// 
 			this.txt_ship_orderid.Location = new System.Drawing.Point(225, 310);
-			this.txt_ship_orderid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_ship_orderid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_ship_orderid.Name = "txt_ship_orderid";
 			this.txt_ship_orderid.Size = new System.Drawing.Size(389, 22);
 			this.txt_ship_orderid.TabIndex = 95;
@@ -3100,7 +3133,7 @@
 			// txt_ship_cost
 			// 
 			this.txt_ship_cost.Location = new System.Drawing.Point(225, 278);
-			this.txt_ship_cost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_ship_cost.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_ship_cost.Name = "txt_ship_cost";
 			this.txt_ship_cost.Size = new System.Drawing.Size(389, 22);
 			this.txt_ship_cost.TabIndex = 93;
@@ -3118,7 +3151,7 @@
 			// txt_ship_identifier
 			// 
 			this.txt_ship_identifier.Location = new System.Drawing.Point(225, 246);
-			this.txt_ship_identifier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_ship_identifier.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_ship_identifier.Name = "txt_ship_identifier";
 			this.txt_ship_identifier.Size = new System.Drawing.Size(389, 22);
 			this.txt_ship_identifier.TabIndex = 91;
@@ -3133,7 +3166,7 @@
             "DHL / Airborne Express",
             "Yellow Freight"});
 			this.cmb_ship_carrier.Location = new System.Drawing.Point(225, 213);
-			this.cmb_ship_carrier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.cmb_ship_carrier.Margin = new System.Windows.Forms.Padding(4);
 			this.cmb_ship_carrier.Name = "cmb_ship_carrier";
 			this.cmb_ship_carrier.Size = new System.Drawing.Size(389, 24);
 			this.cmb_ship_carrier.TabIndex = 90;
@@ -3161,7 +3194,7 @@
 			// txt_ship_comments
 			// 
 			this.txt_ship_comments.Location = new System.Drawing.Point(225, 84);
-			this.txt_ship_comments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_ship_comments.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_ship_comments.Multiline = true;
 			this.txt_ship_comments.Name = "txt_ship_comments";
 			this.txt_ship_comments.Size = new System.Drawing.Size(389, 121);
@@ -3180,7 +3213,7 @@
 			// txt_ship_noticedate
 			// 
 			this.txt_ship_noticedate.Location = new System.Drawing.Point(225, 52);
-			this.txt_ship_noticedate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_ship_noticedate.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_ship_noticedate.Name = "txt_ship_noticedate";
 			this.txt_ship_noticedate.ReadOnly = true;
 			this.txt_ship_noticedate.Size = new System.Drawing.Size(389, 22);
@@ -3199,7 +3232,7 @@
 			// txt_ship_shipmentid
 			// 
 			this.txt_ship_shipmentid.Location = new System.Drawing.Point(225, 20);
-			this.txt_ship_shipmentid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_ship_shipmentid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_ship_shipmentid.Name = "txt_ship_shipmentid";
 			this.txt_ship_shipmentid.Size = new System.Drawing.Size(389, 22);
 			this.txt_ship_shipmentid.TabIndex = 43;
@@ -3219,7 +3252,7 @@
 			this.txt_sharedsecret.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.txt_sharedsecret.Location = new System.Drawing.Point(172, 6);
-			this.txt_sharedsecret.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_sharedsecret.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_sharedsecret.Name = "txt_sharedsecret";
 			this.txt_sharedsecret.Size = new System.Drawing.Size(1780, 22);
 			this.txt_sharedsecret.TabIndex = 17;
@@ -3230,7 +3263,7 @@
 			this.txt_serviceid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.txt_serviceid.Location = new System.Drawing.Point(172, 38);
-			this.txt_serviceid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_serviceid.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_serviceid.Name = "txt_serviceid";
 			this.txt_serviceid.Size = new System.Drawing.Size(1780, 22);
 			this.txt_serviceid.TabIndex = 19;
@@ -3246,40 +3279,9 @@
 			this.label15.TabIndex = 18;
 			this.label15.Text = "Four51 Service ID";
 			// 
-			// tab_orderxml
-			// 
-			this.tab_orderxml.Controls.Add(this.txt_orderxml);
-			this.tab_orderxml.Controls.Add(this.btn_openxml);
-			this.tab_orderxml.Location = new System.Drawing.Point(4, 25);
-			this.tab_orderxml.Name = "tab_orderxml";
-			this.tab_orderxml.Size = new System.Drawing.Size(1949, 702);
-			this.tab_orderxml.TabIndex = 10;
-			this.tab_orderxml.Text = "Order XML";
-			this.tab_orderxml.UseVisualStyleBackColor = true;
-			// 
 			// openOrderXML
 			// 
 			this.openOrderXML.DefaultExt = "xml";
-			// 
-			// btn_openxml
-			// 
-			this.btn_openxml.Location = new System.Drawing.Point(9, 13);
-			this.btn_openxml.Margin = new System.Windows.Forms.Padding(4);
-			this.btn_openxml.Name = "btn_openxml";
-			this.btn_openxml.Size = new System.Drawing.Size(100, 28);
-			this.btn_openxml.TabIndex = 31;
-			this.btn_openxml.Text = "Open Order XML File";
-			this.btn_openxml.UseVisualStyleBackColor = true;
-			this.btn_openxml.Click += new System.EventHandler(this.btn_openxml_Click);
-			// 
-			// txt_orderxml
-			// 
-			this.txt_orderxml.Location = new System.Drawing.Point(9, 60);
-			this.txt_orderxml.Margin = new System.Windows.Forms.Padding(4);
-			this.txt_orderxml.Multiline = true;
-			this.txt_orderxml.Name = "txt_orderxml";
-			this.txt_orderxml.Size = new System.Drawing.Size(1253, 474);
-			this.txt_orderxml.TabIndex = 131;
 			// 
 			// InputForm
 			// 
@@ -3291,7 +3293,7 @@
 			this.Controls.Add(this.txt_sharedsecret);
 			this.Controls.Add(this.label14);
 			this.Controls.Add(this.TabControl1);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "InputForm";
 			this.Text = "SDK Examples";
 			this.tab_address.ResumeLayout(false);
@@ -3322,13 +3324,13 @@
 			this.tab_orderrequest.ResumeLayout(false);
 			this.tab_orderrequest.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.grid_orders)).EndInit();
+			this.tab_orderxml.ResumeLayout(false);
+			this.tab_orderxml.PerformLayout();
 			this.tab_pricescheduleassignments.ResumeLayout(false);
 			this.tab_pricescheduleassignments.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.tabShipNotice.ResumeLayout(false);
 			this.tabShipNotice.PerformLayout();
-			this.tab_orderxml.ResumeLayout(false);
-			this.tab_orderxml.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

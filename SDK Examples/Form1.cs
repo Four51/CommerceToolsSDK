@@ -719,7 +719,7 @@ namespace SDK_Examples
 				var file = openOrderXML.OpenFile();
 				var order = new Four51WebSalesOrder();
 				order.Map(file);
-				txt_orderxml.Text = order.Request.FromUserIP;
+				txt_orderxml.Text = order.ToJson();// order.Request.FromUserIP;
 			}
 		}
 

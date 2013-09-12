@@ -13,7 +13,6 @@ using Four51.APISDK.Common;
 
 namespace Four51.APISDK.Services
 {
-
 	[DataContract(Name = "SalesOrder")]
 	[KnownType(typeof(SalesOrderLineItem))]
 	public class Four51WebSalesOrder : BaseService, ISalesOrder {
