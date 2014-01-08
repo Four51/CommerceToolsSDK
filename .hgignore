@@ -2,6 +2,7 @@
 # http://stackoverflow.com/questions/34784/mercurial-setup-for-visual-studio-2008-projects
 
 syntax: glob
+*.orig
 *.csproj.user
 *.dbproj.user
 *\obj\*
@@ -51,3 +52,16 @@ UpgradeLog.XML
 UpgradeLog.htm
 CoreApp/UI/web.Debug.config
 MiscProjects\WebServices\[Bb]in\*
+Lib\GenerateDataAccess.application
+Lib\GenerateDataAccess.exe.manifest
+.git\*
+Lib\GenerateDataAccess.exe
+.idea
+version.txt
+Lib\Four51FTPAuth\ConnectionStrings.demo.config
+Lib\Four51FTPAuth\ConnectionStrings.local.config
+Lib\Four51FTPAuth\ConnectionStrings.prod.config
+Lib\Four51FTPAuth\ConnectionStrings.qa.config
+Lib\Four51FTPAuth\ConnectionStrings.staging.config
+Lib\Four51FTPAuth\ConnectionStrings.test.config
+Lib\Four51FTPAuth\ConnectionStrings.testdemo.config

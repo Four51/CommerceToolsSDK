@@ -1166,7 +1166,8 @@ namespace Four51.APISDK.Services
 		public SalesOrderPaymentPCard() { }
 		public SalesOrderPaymentPCard(IEnumerable<XElement> card)
 		{
-			this._number = card.Attributes("number").First().Value;
+			if (card.Count() == 0) return;
+			this._number = card.Attributes("number").FirstOrDefault().Value;
 			this._name = card.Attributes("name").First().Value;
 			this._expiration = Utils.DateTimeParseCatch(card.Attributes("expiration").First().Value);
 		}
@@ -1456,6 +1457,7 @@ namespace Four51.APISDK.Services
 		public SalesOrderCoupon() { }
 		public SalesOrderCoupon(IEnumerable<XElement> coupon)
 		{
+			if (coupon.Count() == 0) return;
 			this._code = coupon.TryExtrinsicValue("CouponCode");
 			this._interopid = coupon.TryExtrinsicValue("InteropID");
 			this._amount = Utils.DoubleParseCatch(coupon.TryExtrinsicValue("DiscountAmount"));
