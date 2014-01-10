@@ -10,10 +10,10 @@ namespace Four51.APISDK.Services
 {
 	public class Four51WebSalesOrderList {
 		
-		public Four51WebSalesOrderList(string SharedSecret, string ServiceId)
+		public Four51WebSalesOrderList(string SharedSecret, string ServiceId, string Status = "new")
 		{
 			this.Orders = new List<OrderList>();
-			var url = String.Format("http://www.four51.com/services/{0}/{1}/orders/", ServiceId, SharedSecret);
+			var url = String.Format("http://www.four51.com/services/{0}/{1}/orders/?downloadstatus={2}", ServiceId, SharedSecret, Status);
 			var list = XElement.Load(url);
 			foreach (XElement order in list.Descendants("Order"))
 			{
@@ -32,10 +32,18 @@ namespace Four51.APISDK.Services
 		#endregion
 	}
 
-	public struct OrderList
+	public class OrderList
 	{
-		public string Url;
-		public string ID;
-		public string DownloadStatus;
+		public string Url { get; set; }
+		public string ID { get; set; }
+		public string DownloadStatus { get; set; }
+		public void Update(string SharedSecret, string ServiceId)
+		{
+			var url = String.Format("{0}?setdownloadstatus={1}", this.Url, this.DownloadStatus);
+			var response = XElement.Load(url);
+			var value = response.Value;
+			if (value != DownloadStatus)
+				throw new Exception("Status update failed");
+		}
 	}
 }

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://four51.com/services/order" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://four51.com/services/order" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://four51.com/services/order">
+      <s:element name="CancelOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderPayloadID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SharedSecret" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelOrderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ForwardLineItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OriginalOrderPayloadID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OutGoingOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FromUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SupplierCompanyDuns" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LineItemNumbers" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ForwardLineItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ForwardLineItemsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelOrder" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ForwardLineItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:ForwardLineItems" />
+  </wsdl:message>
+  <wsdl:message name="ForwardLineItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:ForwardLineItemsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OrderSoap">
+    <wsdl:operation name="CancelOrder">
+      <wsdl:input message="tns:CancelOrderSoapIn" />
+      <wsdl:output message="tns:CancelOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ForwardLineItems">
+      <wsdl:input message="tns:ForwardLineItemsSoapIn" />
+      <wsdl:output message="tns:ForwardLineItemsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OrderSoap" type="tns:OrderSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CancelOrder">
+      <soap:operation soapAction="http://four51.com/services/order/CancelOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForwardLineItems">
+      <soap:operation soapAction="http://four51.com/services/order/ForwardLineItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OrderSoap12" type="tns:OrderSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CancelOrder">
+      <soap12:operation soapAction="http://four51.com/services/order/CancelOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForwardLineItems">
+      <soap12:operation soapAction="http://four51.com/services/order/ForwardLineItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Order">
+    <wsdl:port name="OrderSoap" binding="tns:OrderSoap">
+      <soap:address location="http://www.four51.com/services/order.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OrderSoap12" binding="tns:OrderSoap12">
+      <soap12:address location="http://www.four51.com/services/order.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

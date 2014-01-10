@@ -665,7 +665,7 @@ namespace SDK_Examples
 			if (grid_orders.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
 			{
 				var url = grid_orders[2, e.RowIndex].Value.To<string>();
-				var order = new Four51WebSalesOrder();
+				var order = new Four51WebSalesOrder(txt_sharedsecret.Text, txt_serviceid.Text);
 				order.Map(url);
 				txt_orders_result.Text = order.LineItems[1].Detail.Description.ToString();
 			}
@@ -717,7 +717,7 @@ namespace SDK_Examples
 			if (ok == System.Windows.Forms.DialogResult.OK)
 			{
 				var file = openOrderXML.OpenFile();
-				var order = new Four51WebSalesOrder();
+				var order = new Four51WebSalesOrder(txt_sharedsecret.Text, txt_serviceid.Text);
 				order.Map(file);
 				txt_orderxml.Text = order.ToJson();// order.Request.FromUserIP;
 			}

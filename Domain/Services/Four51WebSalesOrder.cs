@@ -10,13 +10,21 @@ using System.Runtime.Serialization;
 using Four51.APISDK;
 using Four51.APISDK.Enums;
 using Four51.APISDK.Common;
+using Four51.APISDK.Four51Order;
 
 namespace Four51.APISDK.Services
 {
 	[DataContract(Name = "SalesOrder")]
 	[KnownType(typeof(SalesOrderLineItem))]
 	public class Four51WebSalesOrder : BaseService, ISalesOrder {
-		public Four51WebSalesOrder() { }
+		private Order _order;
+		public Four51WebSalesOrder(string SharedSecret, string ServiceId) { 
+			_order = new Order() {
+				Url = string.Format("http://www.four51.com/services/Order.asmx?id={0}", ServiceId)
+			};
+			this.ServiceId = ServiceId;
+			this.SharedSecret = SharedSecret;
+		}
 
 		public void Map(string url)
 		{
@@ -37,7 +45,14 @@ namespace Four51.APISDK.Services
 			this.TimeStamp = DateTime.ParseExact(doc.Attribute("timestamp").Value.Replace("T", " "), "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
 			this.Header = new SalesOrderHeader(doc.Elements("Header"));
 			this.Request = new SalesOrderRequest(doc.Descendants("OrderRequestHeader"));
-			this.LineItems = new SalesOrderLineItems(doc.Descendants("ItemOut"));
+			this.LineItems = new SalesOrderLineItems(doc.Descendants("ItemOut"), this);
+		}
+
+		public string ForwardLineItemstoPO(List<SalesOrderLineItem> lineitems, string OutgoingOrderID, string SupplierCompanyDUNS, string Comments)
+		{
+			var ids = lineitems.Select(l => l.LineNumber).ToArray();
+			var result = _order.ForwardLineItems(this.PayLoadID, OutgoingOrderID, string.Empty, SupplierCompanyDUNS, Comments, ids);
+			return result;
 		}
 
 		#region ISalesOrder Members
@@ -99,7 +114,9 @@ namespace Four51.APISDK.Services
 	[KnownType(typeof(SalesOrderLineItemTax))]
 	public class SalesOrderLineItem : ISalesOrderLineItem {
 		public SalesOrderLineItem() { }
-		public SalesOrderLineItem(XElement lineitem) {
+		private Four51WebSalesOrder _order { get; set; }
+
+		public SalesOrderLineItem(XElement lineitem, Four51WebSalesOrder order) {
 			this._linenumber = Utils.Int32ParseCatch(lineitem.Attributes("lineNumber").First().Value);
 			this._quantity = Utils.Int32ParseCatch(lineitem.Attributes("quantity").First().Value);
 			this._requesteddeliverydate = Utils.DateTimeParseCatch(lineitem.Attributes("requestedDeliveryDate").First().Value.Replace("T", " "));
@@ -108,8 +125,14 @@ namespace Four51.APISDK.Services
 			this._shipto = new SalesOrderLineItemShipTo(lineitem.Elements("ShipTo"));
 			this._taxes = new SalesOrderLineItemTaxes(lineitem.Elements("Tax"));
 			this._custom = new Dictionary<object,object>();
+			_order = order;
 		}
 
+		public void ForwardToSupplier(string OutgoingOrderID, string SupplierCompanyDUNS, string Comments)
+		{
+			var po = new Order();
+			po.ForwardLineItems(_order.PayLoadID, OutgoingOrderID, null, SupplierCompanyDUNS, Comments, new int[] { this._linenumber });
+		}
 		#region ISalesOrderLineItem Members
 		private int _linenumber;
 		[DataMember]
@@ -422,9 +445,9 @@ namespace Four51.APISDK.Services
 	public class SalesOrderLineItems : IDictionary<int, SalesOrderLineItem> {
 		private Dictionary<int, SalesOrderLineItem> _list = new Dictionary<int, SalesOrderLineItem>();
 		public SalesOrderLineItems() { }
-		public SalesOrderLineItems(IEnumerable<XElement> lineitems) {
+		public SalesOrderLineItems(IEnumerable<XElement> lineitems, Four51WebSalesOrder order) {
 			foreach (XElement lineitem in lineitems) {
-				SalesOrderLineItem item = new SalesOrderLineItem(lineitem);
+				SalesOrderLineItem item = new SalesOrderLineItem(lineitem, order);
 				this.Add(item.LineNumber, item);
 			}
 		}

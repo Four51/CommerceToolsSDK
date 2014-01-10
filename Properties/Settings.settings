@@ -23,5 +23,11 @@
     <Setting Name="Four51_APISDK_Four51SpendingAccount_SpendingAccount" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://www.four51.com/services/SpendingAccount.asmx</Value>
     </Setting>
+    <Setting Name="Four51_APISDK_Four51PurchaseOrder_PurchaseOrder" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.four51.com/services/PurchaseOrder.asmx</Value>
+    </Setting>
+    <Setting Name="Four51_APISDK_Four51Order_Order" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.four51.com/services/order.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

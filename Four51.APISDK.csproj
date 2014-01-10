@@ -131,7 +131,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\Four51Order\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\Four51Product\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Four51PurchaseOrder\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -194,6 +204,11 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Web References\Four51Order\order.wsdl" />
+    <None Include="Web References\Four51Order\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\Four51Product\ErrorReport.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -212,6 +227,14 @@
     </None>
     <None Include="Web References\Four51Product\Product.wsdl" />
     <None Include="Web References\Four51Product\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Four51PurchaseOrder\ErrorReport.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Four51PurchaseOrder\PurchaseOrder.wsdl" />
+    <None Include="Web References\Four51PurchaseOrder\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -266,6 +289,17 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>Core_Four51WebGroup_Group</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.four51.com/services/order.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Four51Order\</RelPath>
+      <UpdateFromURL>http://www.four51.com/services/order.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Four51_APISDK_Four51Order_Order</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://www.four51.com/services/OrderField.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\Four51OrderFields\</RelPath>
@@ -287,6 +321,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>Core_Four51WebProduct_Product</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.four51.com/services/PurchaseOrder.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Four51PurchaseOrder\</RelPath>
+      <UpdateFromURL>http://www.four51.com/services/PurchaseOrder.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Four51_APISDK_Four51PurchaseOrder_PurchaseOrder</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://www.four51.com/services/SpendingAccount.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
@@ -331,6 +376,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\Four51SpendingAccount\SpendingAccount.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Four51PurchaseOrder\PurchaseOrder.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Four51Order\order.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
