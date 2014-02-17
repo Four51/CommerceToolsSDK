@@ -13,7 +13,7 @@ namespace Four51.APISDK.Services
 		public Four51WebSalesOrderList(string SharedSecret, string ServiceId, string Status = "new")
 		{
 			this.Orders = new List<OrderList>();
-			var url = String.Format("http://www.four51.com/services/{0}/{1}/orders/?downloadstatus={2}", ServiceId, SharedSecret, Status);
+			var url = String.Format("http://test.four51.com/services/{0}/{1}/orders/?downloadstatus={2}", ServiceId, SharedSecret, Status);
 			var list = XElement.Load(url);
 			foreach (XElement order in list.Descendants("Order"))
 			{

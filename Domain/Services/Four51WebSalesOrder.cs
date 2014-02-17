@@ -1680,7 +1680,8 @@ namespace Four51.APISDK.Services
 	public class SalesOrderAddress : ISalesOrderAddress {
 		public SalesOrderAddress() { }
 		public SalesOrderAddress(IEnumerable<XElement> address) {
-			this._id = address.Attributes("addressID").First().Value;
+			if (address.Attributes("addressID").Any() == false) return;
+			this._id = address.Attributes("addressID").FirstOrDefault().Value;
 			this._name = address.FirstElement("Name");
 			this._email = address.FirstElement("Email");
 			var country = address.FirstElement("CountryCode");

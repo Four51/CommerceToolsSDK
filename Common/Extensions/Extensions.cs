@@ -25,7 +25,7 @@ namespace Four51.APISDK.Common {
 		{
 			try
 			{
-				return string.IsNullOrWhiteSpace(s);
+				return string.IsNullOrEmpty(s);
 			}
 			catch (NullReferenceException)
 			{
